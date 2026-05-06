@@ -24,6 +24,203 @@
 <link rel="stylesheet" type="text/css" href="css/main.css"/>
 <link rel="stylesheet" type="text/css" href="css/megamenu.css"/>
 <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+<style>
+    .about-gallery-section {
+        padding: 20px 0 40px;
+    }
+
+    .about-gallery-slider .slick-slide {
+        outline: none;
+    }
+
+    .about-gallery-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+        margin: 0 10px 22px;
+    }
+
+    .about-gallery-media {
+        aspect-ratio: 4 / 5;
+        overflow: hidden;
+        background: #f5f5f5;
+        position: relative;
+    }
+
+    .about-gallery-preview {
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: zoom-in;
+    }
+
+    .about-gallery-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.45s ease;
+    }
+
+    .about-gallery-card:hover .about-gallery-media img {
+        transform: scale(1.04);
+    }
+
+    .about-gallery-media::after {
+        content: "\f065";
+        font-family: "FontAwesome";
+        position: absolute;
+        right: 14px;
+        top: 14px;
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(15, 23, 42, 0.58);
+        color: #fff;
+        font-size: 14px;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: all 0.25s ease;
+        pointer-events: none;
+    }
+
+    .about-gallery-card:hover .about-gallery-media::after {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .about-gallery-caption {
+        position: absolute;
+        left: 18px;
+        bottom: 18px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.62);
+        color: #fff;
+        font-size: 0.85rem;
+        letter-spacing: 0;
+        backdrop-filter: blur(8px);
+    }
+
+    .about-gallery-section .section-title .title {
+        margin-bottom: 0.35rem;
+    }
+
+    .about-gallery-section .section-title .title-desc {
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-gallery-lightbox {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background: rgba(15, 23, 42, 0.88);
+        z-index: 2000;
+    }
+
+    .about-gallery-lightbox.is-open {
+        display: flex;
+    }
+
+    .about-gallery-lightbox-backdrop {
+        position: absolute;
+        inset: 0;
+    }
+
+    .about-gallery-lightbox-panel {
+        position: relative;
+        z-index: 1;
+        width: min(980px, 100%);
+        max-height: 92vh;
+        background: #0f172a;
+        border-radius: 20px;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+        overflow: hidden;
+    }
+
+    .about-gallery-lightbox-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 18px;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .about-gallery-lightbox-counter {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .about-gallery-lightbox-close,
+    .about-gallery-lightbox-nav {
+        appearance: none;
+        border: 0;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .about-gallery-lightbox-close:hover,
+    .about-gallery-lightbox-nav:hover {
+        background: rgba(255, 255, 255, 0.18);
+        transform: translateY(-1px);
+    }
+
+    .about-gallery-lightbox-content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 60vh;
+        padding: 18px;
+    }
+
+    .about-gallery-lightbox-content img {
+        max-width: 100%;
+        max-height: 76vh;
+        object-fit: contain;
+        display: block;
+    }
+
+    .about-gallery-lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 46px;
+        height: 46px;
+    }
+
+    .about-gallery-lightbox-nav:hover {
+        transform: translateY(-50%);
+    }
+
+    .about-gallery-lightbox-prev {
+        left: 16px;
+    }
+
+    .about-gallery-lightbox-next {
+        right: 16px;
+    }
+</style>
 
 </head>
 
@@ -388,6 +585,7 @@ Three Key Guarantees:<br>
 </div></div></div>
 
         </section>
+        
         <!--services-section end-->
                 <div class="row">
                     <div class="col-lg-12">
@@ -627,6 +825,92 @@ Three Key Guarantees:<br>
                                     </div><!-- ttm-fid end -->
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ttm-row about-gallery-section clearfix">
+            <div class="container">
+                <div class="section-title title-style-center_text">
+                    <div class="title-header">
+                        <h2 class="title">Visual Showcase</h2>
+                    </div>
+                    <div class="title-desc">
+                        <p>A quick gallery of the fabrics, production details, and workspace atmosphere behind our brand.</p>
+                    </div>
+                </div>
+                <div class="row slick_slider about-gallery-slider slick-arrows-style1 slick-dots-style1"
+                    data-slick='{"slidesToShow":3,"slidesToScroll":1,"arrows":true,"dots":true,"autoplay":true,"autoplaySpeed":2400,"infinite":true,"responsive":[{"breakpoint":1100,"settings":{"slidesToShow":2}},{"breakpoint":575,"settings":{"slidesToShow":1}}]}'>
+                    <div class="col-lg-4">
+                        <div class="about-gallery-card">
+                            <div class="about-gallery-media">
+                                <a class="about-gallery-preview" href="images/about_01.png" data-index="0" aria-label="Preview image 1">
+                                    <img src="images/about_01.png" alt="About gallery image 1">
+                                </a>
+                            </div>
+                            <div class="about-gallery-caption">01</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="about-gallery-card">
+                            <div class="about-gallery-media">
+                                <a class="about-gallery-preview" href="images/about_02.png" data-index="1" aria-label="Preview image 2">
+                                    <img src="images/about_02.png" alt="About gallery image 2">
+                                </a>
+                            </div>
+                            <div class="about-gallery-caption">02</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="about-gallery-card">
+                            <div class="about-gallery-media">
+                                <a class="about-gallery-preview" href="images/about_03.png" data-index="2" aria-label="Preview image 3">
+                                    <img src="images/about_03.png" alt="About gallery image 3">
+                                </a>
+                            </div>
+                            <div class="about-gallery-caption">03</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="about-gallery-card">
+                            <div class="about-gallery-media">
+                                <a class="about-gallery-preview" href="images/about_04.png" data-index="3" aria-label="Preview image 4">
+                                    <img src="images/about_04.png" alt="About gallery image 4">
+                                </a>
+                            </div>
+                            <div class="about-gallery-caption">04</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="about-gallery-card">
+                            <div class="about-gallery-media">
+                                <a class="about-gallery-preview" href="images/about_05.png" data-index="4" aria-label="Preview image 5">
+                                    <img src="images/about_05.png" alt="About gallery image 5">
+                                </a>
+                            </div>
+                            <div class="about-gallery-caption">05</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="about-gallery-card">
+                            <div class="about-gallery-media">
+                                <a class="about-gallery-preview" href="images/about_06.png" data-index="5" aria-label="Preview image 6">
+                                    <img src="images/about_06.png" alt="About gallery image 6">
+                                </a>
+                            </div>
+                            <div class="about-gallery-caption">06</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="about-gallery-card">
+                            <div class="about-gallery-media">
+                                <a class="about-gallery-preview" href="images/about_07.png" data-index="6" aria-label="Preview image 7">
+                                    <img src="images/about_07.png" alt="About gallery image 7">
+                                </a>
+                            </div>
+                            <div class="about-gallery-caption">07</div>
                         </div>
                     </div>
                 </div>
@@ -904,6 +1188,20 @@ better serve our customers.</p>
 
 </div><!-- page end -->
 
+    <div class="about-gallery-lightbox" id="aboutGalleryLightbox" aria-hidden="true">
+        <div class="about-gallery-lightbox-backdrop" id="aboutGalleryBackdrop"></div>
+        <div class="about-gallery-lightbox-panel" role="dialog" aria-modal="true" aria-label="About gallery preview">
+            <div class="about-gallery-lightbox-toolbar">
+                <div class="about-gallery-lightbox-counter" id="aboutGalleryCounter">1 / 7</div>
+                <button type="button" class="about-gallery-lightbox-close" id="aboutGalleryClose" aria-label="Close preview">&times;</button>
+            </div>
+            <div class="about-gallery-lightbox-content">
+                <button type="button" class="about-gallery-lightbox-nav about-gallery-lightbox-prev" id="aboutGalleryPrev" aria-label="Previous image">&#10094;</button>
+                <img id="aboutGalleryPreviewImage" src="" alt="Gallery preview">
+                <button type="button" class="about-gallery-lightbox-nav about-gallery-lightbox-next" id="aboutGalleryNext" aria-label="Next image">&#10095;</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Javascript -->
     <script src="js/jquery-3.6.0.min.js"></script>
@@ -918,6 +1216,80 @@ better serve our customers.</p>
     <script src="js/imagesloaded.min.js"></script>
     <script src="js/jquery-isotope.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var galleryImages = [
+                'images/about_01.png',
+                'images/about_02.png',
+                'images/about_03.png',
+                'images/about_04.png',
+                'images/about_05.png',
+                'images/about_06.png',
+                'images/about_07.png'
+            ];
+
+            var lightbox = document.getElementById('aboutGalleryLightbox');
+            var backdrop = document.getElementById('aboutGalleryBackdrop');
+            var closeButton = document.getElementById('aboutGalleryClose');
+            var prevButton = document.getElementById('aboutGalleryPrev');
+            var nextButton = document.getElementById('aboutGalleryNext');
+            var previewImage = document.getElementById('aboutGalleryPreviewImage');
+            var counter = document.getElementById('aboutGalleryCounter');
+            var currentIndex = 0;
+
+            function renderPreview(index) {
+                currentIndex = (index + galleryImages.length) % galleryImages.length;
+                previewImage.src = galleryImages[currentIndex];
+                previewImage.alt = 'Gallery image ' + (currentIndex + 1);
+                counter.textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
+            }
+
+            function openPreview(index) {
+                renderPreview(index);
+                lightbox.classList.add('is-open');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closePreview() {
+                lightbox.classList.remove('is-open');
+                lightbox.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('.about-gallery-preview').forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    openPreview(parseInt(link.getAttribute('data-index'), 10) || 0);
+                });
+            });
+
+            prevButton.addEventListener('click', function () {
+                renderPreview(currentIndex - 1);
+            });
+
+            nextButton.addEventListener('click', function () {
+                renderPreview(currentIndex + 1);
+            });
+
+            closeButton.addEventListener('click', closePreview);
+            backdrop.addEventListener('click', closePreview);
+
+            document.addEventListener('keydown', function (event) {
+                if (!lightbox.classList.contains('is-open')) {
+                    return;
+                }
+
+                if (event.key === 'Escape') {
+                    closePreview();
+                } else if (event.key === 'ArrowLeft') {
+                    renderPreview(currentIndex - 1);
+                } else if (event.key === 'ArrowRight') {
+                    renderPreview(currentIndex + 1);
+                }
+            });
+        });
+    </script>
     <!-- Javascript end-->
 
 </body>
