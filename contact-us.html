@@ -268,18 +268,22 @@
                                     </div>
                                 </div><!-- section title end -->
                                 <div id="thankYouDiv"
-                                    style="color:green;font-size:1.5rem;text-align:center;display:none;">
-                                    <p>Your Form Submitted Successfully.Our Team Will Get back to you soon.</p>
+                                    style="color:green;font-size:1.2rem;text-align:center;display:none;margin-bottom:1rem;">
+                                    <p>Inquiry sent successfully. Our team will get back to you soon.</p>
+                                </div>
+                                <div id="errorDiv"
+                                    style="color:#c0392b;font-size:1.1rem;text-align:center;display:none;margin-bottom:1rem;">
+                                    <p>Sorry, your inquiry could not be sent right now. Please try again later.</p>
                                 </div>
                                 <form id="request_quote_form" class="request_quote_form wrap-form clearfix"
-                                    method="post" action="">
+                                    method="post" action="https://formsubmit.co/ajax/Adafeng@Cyncho.com">
                                     <div class="row">
                                         <div class="col-md-4">
                                             <span class="text-input"><input name="name" id="first_input" type="text"
                                                     value="" placeholder="Name" required="required"></span>
                                         </div>
                                         <div class="col-md-4">
-                                            <span class="text-input"><input name="email" type="text" value=""
+                                            <span class="text-input"><input name="email" type="email" value=""
                                                     placeholder="E-mail" required="required"></span>
                                         </div>
                                         <div class="col-md-4">
@@ -287,16 +291,16 @@
                                                     placeholder="Phone/Whatsapp" required="required"></span>
                                         </div>
                                         <div class="col-md-6">
-                                            <span class="text-input"><input name="company name*" type="text" value=""
+                                            <span class="text-input"><input name="company_name" type="text" value=""
                                                     placeholder="Company Name*" required="required"></span>
                                         </div>
-                                        <!-- <div class="col-md-6">
-                                        <span class="text-input"><input name="subject" type="text" value="" placeholder="Subject" required="required"></span>
-                                    </div> -->
                                         <div class="col-lg-12">
                                             <span class="text-input"><textarea name="content" rows="5"
                                                     placeholder="content" required="required"></textarea></span>
                                         </div>
+                                        <input type="hidden" name="_subject" value="New Inquiry from Cyncho Website">
+                                        <input type="hidden" name="_captcha" value="false">
+                                        <input type="hidden" name="_template" value="table">
                                         <div class="col-lg-12">
                                             <div class="pt-15 text-center">
                                                 <button
@@ -505,31 +509,39 @@
     </div><!-- page end -->
     <script>
 
-        window.onload = function () {
-            document.getElementById('#request_quote_form input').scrollIntoView({ behavior: 'smooth' });
-        };
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('request_quote_form');
+            var thankYouDiv = document.getElementById('thankYouDiv');
+            var errorDiv = document.getElementById('errorDiv');
+            var submitButton = document.getElementById('submit');
 
-        document.getElementById('request_quote_form').addEventListener('submit', function (e) {
-            // Get form data
-            var formData = new FormData(document.getElementById('request_quote_form'));
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                thankYouDiv.style.display = 'none';
+                errorDiv.style.display = 'none';
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
 
-            // Submit form data via AJAX
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST.html', 'submit_email.html', true);
-
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    // Success: Do something with the response (xhr.responseText)
-                    alert('Form submitted successfully!');
-                    document.getElementById('request_quote_form').reset();
-                    document.getElementById('thankYouDiv').style.display = 'block';
-                } else {
-                    // Error: Alert the user
-                    alert('An error occurred while submitting the form.');
-                }
-            };
-
-            xhr.send(formData);
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(function (response) {
+                    if (response.ok) {
+                        form.reset();
+                        thankYouDiv.style.display = 'block';
+                    } else {
+                        errorDiv.style.display = 'block';
+                    }
+                }).catch(function () {
+                    errorDiv.style.display = 'block';
+                }).finally(function () {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Inquiry Now';
+                });
+            });
         });
 
 
