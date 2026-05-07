@@ -57,7 +57,11 @@
     General
 ------------------------*/
 
-
+#logo-img{
+    width: auto;
+    height: 50px;
+    padding: 0;
+}
 
 /* Styling for split sections */
 .mega-submenu-split {

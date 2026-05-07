@@ -129,7 +129,7 @@
 	.header_extra , .widget_info{ display: none !important; visibility: hidden; }
 
 	/* logo */
-	.site-branding { padding: 25px 0; }
+	.site-branding { padding: 12px 0; }
 
 	.ttm-header-style-01 #site-header-menu{ ackground-color: transparent; }
 
