@@ -1,1394 +1,1319 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from Cynchogarments.com/about-us by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Apr 2026 04:08:57 GMT -->
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="best garment manufacturers in china,clothing manufacturers" />
-    <meta name="description"
-        content="Elevate your style with Cyncho Garments, the best garment manufacturers in china. Discover quality craftsmanship and timeless fashion" />
-    <meta name="author" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About us - Cyncho Garments</title>
-
-    <link rel="shortcut icon" href="images/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
-    <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="css/themify-icons.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick.css">
-    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
-    <link rel="stylesheet" type="text/css" href="css/shortcodes.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
-    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-    <style>
-        .about-gallery-section {
-            padding: 20px 0 40px;
-        }
-
-        .about-gallery-slider .slick-slide {
-            outline: none;
-        }
-
-        .about-gallery-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 18px;
-            background: #fff;
-            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
-            margin: 0 10px 22px;
-        }
-
-        .about-gallery-media {
-            aspect-ratio: 4 / 5;
-            overflow: hidden;
-            background: #f5f5f5;
-            position: relative;
-        }
-
-        .about-gallery-preview {
-            display: block;
-            width: 100%;
-            height: 100%;
-            cursor: zoom-in;
-        }
-
-        .about-gallery-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.45s ease;
-        }
-
-        .about-gallery-card:hover .about-gallery-media img {
-            transform: scale(1.04);
-        }
-
-        .about-gallery-media::after {
-            content: "\f065";
-            font-family: "FontAwesome";
-            position: absolute;
-            right: 14px;
-            top: 14px;
-            width: 38px;
-            height: 38px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(15, 23, 42, 0.58);
-            color: #fff;
-            font-size: 14px;
-            opacity: 0;
-            transform: scale(0.9);
-            transition: all 0.25s ease;
-            pointer-events: none;
-        }
-
-        .about-gallery-card:hover .about-gallery-media::after {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .about-gallery-caption {
-            position: absolute;
-            left: 18px;
-            bottom: 18px;
-            padding: 8px 12px;
-            border-radius: 999px;
-            background: rgba(15, 23, 42, 0.62);
-            color: #fff;
-            font-size: 0.85rem;
-            letter-spacing: 0;
-            backdrop-filter: blur(8px);
-        }
-
-        .about-gallery-section .section-title .title {
-            margin-bottom: 0.35rem;
-        }
-
-        .about-gallery-section .section-title .title-desc {
-            max-width: 720px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .about-gallery-lightbox {
-            position: fixed;
-            inset: 0;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            background: rgba(15, 23, 42, 0.88);
-            z-index: 2000;
-        }
-
-        .about-gallery-lightbox.is-open {
-            display: flex;
-        }
-
-        .about-gallery-lightbox-backdrop {
-            position: absolute;
-            inset: 0;
-        }
-
-        .about-gallery-lightbox-panel {
-            position: relative;
-            z-index: 1;
-            width: min(980px, 100%);
-            max-height: 92vh;
-            background: #0f172a;
-            border-radius: 20px;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-            overflow: hidden;
-        }
-
-        .about-gallery-lightbox-toolbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            padding: 14px 18px;
-            color: #fff;
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        .about-gallery-lightbox-counter {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .about-gallery-lightbox-close,
-        .about-gallery-lightbox-nav {
-            appearance: none;
-            border: 0;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            width: 40px;
-            height: 40px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background 0.2s ease, transform 0.2s ease;
-        }
-
-        .about-gallery-lightbox-close:hover,
-        .about-gallery-lightbox-nav:hover {
-            background: rgba(255, 255, 255, 0.18);
-            transform: translateY(-1px);
-        }
-
-        .about-gallery-lightbox-content {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 60vh;
-            padding: 18px;
-        }
-
-        .about-gallery-lightbox-content img {
-            max-width: 100%;
-            max-height: 76vh;
-            object-fit: contain;
-            display: block;
-        }
-
-        .about-gallery-lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 46px;
-            height: 46px;
-        }
-
-        .about-gallery-lightbox-nav:hover {
-            transform: translateY(-50%);
-        }
-
-        .about-gallery-lightbox-prev {
-            left: 16px;
-        }
-
-        .about-gallery-lightbox-next {
-            right: 16px;
-        }
-    </style>
-
-</head>
-
-<body>
-
-    <div class="floatingButtonWrap">
-        <div class="floatingButtonInner">
-            <a href="#" class="floatingButton">
-                <i class="fa fa-comment icon-default"></i>
-            </a>
-            <ul class="floatingMenu">
-                <li>
-                    <a href="tel:86-15876452036" class="call-icon"></a>
-                </li>
-                <!-- <li>
-                <a href="https://wa.me/8615876452036" target="_blank" class="whatsapp-icon"></a>
-            </li> -->
-                <li>
-                    <a href="mailto:Adafeng@Cyncho.com" class="email-icon"></a>
-                </li>
-
-
-            </ul>
+    <!-- Mirrored from Cynchogarments.com/about-us by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Apr 2026 04:08:57 GMT -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="best garment manufacturers in china,clothing manufacturers" />
+        <meta name="description" content="Elevate your style with Cyncho Garments, the best garment manufacturers in china. Discover quality craftsmanship and timeless fashion" />
+        <meta name="author" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>About us - Cyncho Garments</title>
+        <link rel="shortcut icon" href="images/favicon.png" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
+        <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+        <link rel="stylesheet" type="text/css" href="css/themify-icons.css" />
+        <link rel="stylesheet" type="text/css" href="css/slick.css">
+        <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+        <link rel="stylesheet" type="text/css" href="css/shortcodes.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        <style>
+            .about-gallery-section {
+                padding: 20px 0 40px;
+            }
+            .about-gallery-slider .slick-slide {
+                outline: none;
+            }
+            .about-gallery-card {
+                position: relative;
+                overflow: hidden;
+                border-radius: 18px;
+                background: #fff;
+                box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+                margin: 0 10px 22px;
+            }
+            .about-gallery-media {
+                aspect-ratio: 4 / 5;
+                overflow: hidden;
+                background: #f5f5f5;
+                position: relative;
+            }
+            .about-gallery-preview {
+                display: block;
+                width: 100%;
+                height: 100%;
+                cursor: zoom-in;
+            }
+            .about-gallery-media img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.45s ease;
+            }
+            .about-gallery-card:hover .about-gallery-media img {
+                transform: scale(1.04);
+            }
+            .about-gallery-media::after {
+                content: "\f065";
+                font-family: "FontAwesome";
+                position: absolute;
+                right: 14px;
+                top: 14px;
+                width: 38px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: rgba(15, 23, 42, 0.58);
+                color: #fff;
+                font-size: 14px;
+                opacity: 0;
+                transform: scale(0.9);
+                transition: all 0.25s ease;
+                pointer-events: none;
+            }
+            .about-gallery-card:hover .about-gallery-media::after {
+                opacity: 1;
+                transform: scale(1);
+            }
+            .about-gallery-caption {
+                position: absolute;
+                left: 18px;
+                bottom: 18px;
+                padding: 8px 12px;
+                border-radius: 999px;
+                background: rgba(15, 23, 42, 0.62);
+                color: #fff;
+                font-size: 0.85rem;
+                letter-spacing: 0;
+                backdrop-filter: blur(8px);
+            }
+            .about-gallery-section .section-title .title {
+                margin-bottom: 0.35rem;
+            }
+            .about-gallery-section .section-title .title-desc {
+                max-width: 720px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .about-gallery-lightbox {
+                position: fixed;
+                inset: 0;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                padding: 24px;
+                background: rgba(15, 23, 42, 0.88);
+                z-index: 2000;
+            }
+            .about-gallery-lightbox.is-open {
+                display: flex;
+            }
+            .about-gallery-lightbox-backdrop {
+                position: absolute;
+                inset: 0;
+            }
+            .about-gallery-lightbox-panel {
+                position: relative;
+                z-index: 1;
+                width: min(980px, 100%);
+                max-height: 92vh;
+                background: #0f172a;
+                border-radius: 20px;
+                box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+                overflow: hidden;
+            }
+            .about-gallery-lightbox-toolbar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                padding: 14px 18px;
+                color: #fff;
+                background: rgba(255, 255, 255, 0.04);
+            }
+            .about-gallery-lightbox-counter {
+                font-size: 0.95rem;
+                color: rgba(255, 255, 255, 0.8);
+            }
+            .about-gallery-lightbox-close,
+            .about-gallery-lightbox-nav {
+                appearance: none;
+                border: 0;
+                background: rgba(255, 255, 255, 0.1);
+                color: #fff;
+                width: 40px;
+                height: 40px;
+                border-radius: 999px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: background 0.2s ease, transform 0.2s ease;
+            }
+            .about-gallery-lightbox-close:hover,
+            .about-gallery-lightbox-nav:hover {
+                background: rgba(255, 255, 255, 0.18);
+                transform: translateY(-1px);
+            }
+            .about-gallery-lightbox-content {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 60vh;
+                padding: 18px;
+            }
+            .about-gallery-lightbox-content img {
+                max-width: 100%;
+                max-height: 76vh;
+                object-fit: contain;
+                display: block;
+            }
+            .about-gallery-lightbox-nav {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 46px;
+                height: 46px;
+            }
+            .about-gallery-lightbox-nav:hover {
+                transform: translateY(-50%);
+            }
+            .about-gallery-lightbox-prev {
+                left: 16px;
+            }
+            .about-gallery-lightbox-next {
+                right: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="floatingButtonWrap">
+            <div class="floatingButtonInner">
+                <a href="#" class="floatingButton">
+                    <i class="fa fa-comment icon-default">
+                    </i>
+                </a>
+                <ul class="floatingMenu">
+                    <li>
+                        <a href="tel:86-15876452036" class="call-icon">
+                        </a>
+                    </li>
+                    <!-- <li>
+                                    <a href="https://wa.me/8615876452036" target="_blank" class="whatsapp-icon"></a>
+                                </li> -->
+                    <li>
+                        <a href="mailto:Adafeng@Cyncho.com" class="email-icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+        <!--page start-->
+        <div class="page">
+            <!--header start-->
+            <header id="masthead" class="header ttm-header-style-03">
+                <!-- topbar -->
+                <div class="top_bar ttm-bgcolor-darkgrey clearfix">
+                    <div class="container">
+                        <div class="row no-gutters">
+                            <div class="col-xl-12 d-flex flex-row align-items-center">
+                                <div class="top_bar_contact_item">
+                                    <div class="top_bar_icon">
+                                        <i class="ti-headphone-alt">
+                                        </i>
+                                    </div>
+                                    <a href="tel:86-15876452036" onclick="return confirm('Do you want to call 86-15876452036?');">86-15876452036</a>
+                                </div>
+                                <!-- <div class="top_bar_contact_item">
+                                                                <div class="top_bar_icon"><i class="ti ti-location-pin"></i></div> No.1, Lane 1, Youwu, Subian Village, Chashan Town, Dongguan, China
+                                                            </div> -->
+                                <div class="top_bar_contact_item top_bar_social ml-auto p-0">
+                                    <ul class="social-icons list-inline">
+                                        <!-- <li><a class="tooltip-top" href="#" rel="noopener" aria-label="facebook" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                                                            <li><a class="tooltip-top" href="#" rel="noopener" aria-label="twitter" data-tooltip="Twitter"><i class="fa fa-twitter"></i></a></li> -->
+                                        <li>
+                                            <a class="tooltip-top" href="https://www.instagram.com/cyncho__/" rel="noopener" aria-label="instagram" data-tooltip="instagram">
+                                                <i class="fa fa-instagram">
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="tooltip-top" href="#" rel="noopener" aria-label="linkedin" data-tooltip="Linkedin">
+                                                <i class="fa fa-linkedin">
+                                                </i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="top_bar_contact_item">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- topbar end -->
+                <!-- site-header-menu -->
+                <div id="site-header-menu" class="site-header-menu ttm-bgcolor-white">
+                    <div class="site-header-menu-inner ttm-stickable-header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!--site-navigation -->
+                                    <div class="site-navigation d-flex flex-row align-items-center justify-content-between">
+                                        <!-- site-branding -->
+                                        <div class="site-branding ">
+                                            <a class="home-link" href="index-2.html" title="Fablio" rel="home">
+                                                <img id="logo-img" height="37" width="138" class="img-fluid auto_size" src="images/logo.png" alt="logo-img">
+                                            </a>
+                                        </div>
+                                        <!-- site-branding end -->
+                                        <div class="d-flex flex-row m-auto">
+                                            <div class="btn-show-menu-mobile menubar menubar--squeeze">
+                                                <span class="menubar-box">
+                                                    <span class="menubar-inner">
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <!-- menu -->
+                                            <nav class="main-menu menu-mobile" id="menu">
+                                                <ul class="menu">
+                                                    <li class="mega-menu-item">
+                                                        <li>
+                                                            <a href="index.html">Home</a>
+                                                        </li>
+                                                    </li>
+                                                    <li class="mega-menu-item" id="desktop-menu">
+                                                        <a href="#" class="mega-menu-link">Showcase</a>
+                                                        <ul class="mega-submenu" style="width:30rem;">
+                                                            <li class="mega-submenu-split">
+                                                                <div class="mega-submenu-split-section" style="padding-left:2rem">
+                                                                    <h3>Ready to wear</h3>
+                                                                    <ul style="margin-left:-8rem;">
+                                                                        <li>
+                                                                            <a href="showcase/jacket.html">Coats & Jackets</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="showcase/tops.html">Top & Blouse</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="showcase/dresses.html">Dresses</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="showcase/bottoms_Jumpsuits.html">Bottoms & Jumpsuits</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="showcase/knitwerar.html">Knitwerar</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <!-- <div class="mega-submenu-split-section" style="padding-right:5rem">
+                                                                                                                                <h3>Accessories</h3>
+                                                                                                                                <ul style="margin-left:-8rem;">
 
-    <!--page start-->
-    <div class="page">
+                                                                                                                                    <li><a href="showcase/footwear.html">Footwear </a></li>
+                                                                                                                                    <li><a href="showcase/bags.html">Handbags</a></li>
+                                                                                                                                    <li><a href="showcase/jewellery.html">Jewellery</a></li>
+                                                                                                                                   <li><a href="showcase/belts.html">Belts</a></li>
 
-
-        <!--header start-->
-        <header id="masthead" class="header ttm-header-style-03">
-            <!-- topbar -->
-            <div class="top_bar ttm-bgcolor-darkgrey clearfix">
+                                                                                                                                </ul>
+                                                                                                                            </div> -->
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-menu-item active">
+                                                        <a href="about-us.html">About Us</a>
+                                                    </li>
+                                                    <li class="mega-menu-item" id='mobile-menu'>
+                                                        <a href="showcase/index.html" class="mega-menu-link">Showecase</a>
+                                                        <ul class="mega-submenu">
+                                                            <li>
+                                                                <a style="font-weight:700; font-size:.9rem">Ready to Wear</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="showcase/jacket.html">Coats & Jackets</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="showcase/dresses.html">Dresses</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="showcase/tops.html">Top & Blouse</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="showcase/bottoms_Jumpsuits.html">Bottoms & Jumpsuits</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="showcase/knitwerar.html">Knitwerar</a>
+                                                            </li>
+                                                            <!-- <li><a style="font-weight:700;font-size:.9rem">Accessories</a></li>
+                                                                                                                    <li><a href="showcase/footwear.html">Footwear </a></li>
+                                                                                                                    <li><a href="showcase/bags.html">Handbags</a></li>
+                                                                                                                    <li><a href="showcase/jewellery.html">Jewellery</a></li>
+                                                                                                                     <li><a href="showcase/belts.html">Belts</a></li> -->
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-menu-item">
+                                                        <a href="garment-manufacturing.html" class="mega-menu-link">Services</a>
+                                                        <ul class="mega-submenu">
+                                                            <li>
+                                                                <a href="garment-manufacturing.html">Garment Manufacturing</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="garment-designing.html">Garment Designing</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="fabric-trim-sourcing.html">Fabric & trim sourcing</a>
+                                                            </li>
+                                                            <!-- <li><a href="embroidery-designing.html">Embrioidery Designing</a></li> -->
+                                                            <li>
+                                                                <a href="product-development.html">Product Development</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <!-- <li class="mega-menu-item">
+                                                                                                       <li><a href="clients.html">Clients</a></li>
+                                                                                                    </li> -->
+                                                    <li class="mega-menu-item">
+                                                        <a href="blog.html">Blog</a>
+                                                    </li>
+                                                    <li class="mega-menu-item">
+                                                        <a href="contact-us.html">Contact us</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                            <!-- menu end -->
+                                        </div>
+                                        <div class="widget_info d-flex flex-row align-items-center">
+                                            <div class="widget_icon ttm-textcolor-skincolor">
+                                                <i class="flaticon-email">
+                                                </i>
+                                            </div>
+                                            <div class="widget_content">
+                                                <h3 class="widget_title">
+                                                    <a href="mailto:Adafeng@Cyncho.com">Adafeng@Cyncho.com</a>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- site-navigation end-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- site-header-menu end-->
+            </header>
+            <!--header end-->
+            <!-- page-title -->
+            <div class="ttm-page-title-row ttm-bg ttm-bgimage-yes ttm-bgcolor-darkgrey clearfix">
+                <div class="ttm-row-wrapper-bg-layer ttm-bg-layer">
+                </div>
                 <div class="container">
-                    <div class="row no-gutters">
-                        <div class="col-xl-12 d-flex flex-row align-items-center">
-                            <div class="top_bar_contact_item">
-                                <div class="top_bar_icon"><i class="ti-headphone-alt"></i></div><a
-                                    href="tel:86-15876452036"
-                                    onclick="return confirm('Do you want to call 86-15876452036?');">86-15876452036</a>
-                            </div>
-                            <!-- <div class="top_bar_contact_item">
-                                <div class="top_bar_icon"><i class="ti ti-location-pin"></i></div> No.1, Lane 1, Youwu, Subian Village, Chashan Town, Dongguan, China
-                            </div> -->
-                            <div class="top_bar_contact_item top_bar_social ml-auto p-0">
-                                <ul class="social-icons list-inline">
-                                    <!-- <li><a class="tooltip-top" href="#" rel="noopener" aria-label="facebook" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a class="tooltip-top" href="#" rel="noopener" aria-label="twitter" data-tooltip="Twitter"><i class="fa fa-twitter"></i></a></li> -->
-                                    <li><a class="tooltip-top" href="https://www.instagram.com/cyncho__/" rel="noopener"
-                                            aria-label="instagram" data-tooltip="instagram"><i
-                                                class="fa fa-instagram"></i></a></li>
-                                    <li><a class="tooltip-top" href="#" rel="noopener" aria-label="linkedin"
-                                            data-tooltip="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="top_bar_contact_item">
-
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <div class="ttm-page-title-row-inner">
+                                <div class="page-title-heading">
+                                    <h1 class="title">About Us</h1>
+                                </div>
+                                <div class="breadcrumb-wrapper">
+                                    <span>
+                                        <a title="Homepage" href="index-2.html">Home</a>
+                                    </span>
+                                    <span>About Us</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- topbar end -->
-            <!-- site-header-menu -->
-            <div id="site-header-menu" class="site-header-menu ttm-bgcolor-white">
-                <div class="site-header-menu-inner ttm-stickable-header">
+            <!-- page-title end -->
+            <!--site-main start-->
+            <div class="site-main">
+                <!--about-section-->
+                <section class="ttm-row about-section clearfix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-6 col-sm-8">
+                                <div class="ttm_single_image-wrapper">
+                                    <img class="img-fluid auto_size" width="375" height="524" src="images/about_us_2.jpg" alt="single-07">
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-12 col-xs-12">
+                                <div class="padding_left30 padding_top20 res-991-padding_left0 res-991-padding_top40">
+                                    <!-- section title -->
+                                    <div class="section-title">
+                                        <div class="title-header">
+                                            <h3>WHO WE ARE</h3>
+                                            <h2 class="title">DONGGUAN CYNCHO GARMENTS CO. ltd ORIGINAL GARMENTS FACTORY</h2>
+                                        </div>
+                                        <div class="title-desc">
+                                            <p>
+                                                Dongguan CYNCHO Garment Factory was established in 2010, is a small sewing machine workshop slowly evolved, now the factory is equipped with the number of people 30-50 people, 40 parking spaces, the annual output of more than 300,000 pieces, the establishment of an independent production department, packaging department, sample sewing department, follow up on the orders of the department. Sample sewing department, follow up department, cutting department, At present, the company has a wholly-owned woven factory, specializing in the production of all kinds of woven women's and men's apparel, like top, shirt, pant,dress, jacket,coat, There is also an invested woolen factory that produces all kinds of knitted and sweater clothes. Our factory has a complete set of complete production system, through the SEDEX and GOTS GRS RWS certification, hope to be able to a new look of quality service and high-end quality to better serve our customers.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- section title end -->
+                                    <div class="ttm-horizontal_sep width-100 padding_top30">
+                                    </div>
+                                    <div class="d-inline-block margin_top15">
+                                        <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-dark margin_top15" href="contact-us.html">contact us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- row end -->
+                    </div>
+                </section>
+                <!--about-section end-->
+                <!--services-section-->
+                <section class="ttm-row service-section ttm-bgcolor-grey position-relative z-index-2 clearfix">
+                    <div class="container">
+                        <!-- row -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- section-title -->
+                                <div class="section-title title-style-center_text">
+                                    <div class="title-header">
+                                        <h2 class="title">We are pround of these</h2>
+                                    </div>
+                                </div>
+                                <!-- section-title end -->
+                            </div>
+                        </div>
+                        <!-- row end -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="featuredbox-number">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-sm-6">
+                                            <!--featured-icon-box-->
+                                            <div class="featured-icon-box icon-align-top-content style5">
+                                                <i class="ttm-num ti-info">
+                                                </i>
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
+                                                        <i class="flaticon flaticon-textile-1">
+                                                        </i>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>Time</h3>
+                                                    </div>
+                                                    <div class="featured-desc">
+                                                        <p>Fast Production time10days.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- featured-icon-box end-->
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-6">
+                                            <!--featured-icon-box-->
+                                            <div class="featured-icon-box icon-align-top-content style5">
+                                                <i class="ttm-num ti-info">
+                                                </i>
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
+                                                        <i class="flaticon flaticon-silk">
+                                                        </i>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>Cert</h3>
+                                                    </div>
+                                                    <div class="featured-desc">
+                                                        <p>
+                                                            GOTS&GRS&RWS fabric&Yarn Cert,we have our own woven clothes factoryand knit clothes factory,meet customers four sean request.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- featured-icon-box end-->
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-6">
+                                            <!--featured-icon-box-->
+                                            <div class="featured-icon-box icon-align-top-content style5">
+                                                <i class="ttm-num ti-info">
+                                                </i>
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
+                                                        <i class="flaticon flaticon-moisture-wicking-fabric">
+                                                        </i>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>Quality&Solution</h3>
+                                                    </div>
+                                                    <div class="featured-desc">
+                                                        <p>high quality sewning&accpetOEM&accept low MOQ.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- featured-icon-box end-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <!--site-navigation -->
-                                <div class="site-navigation d-flex flex-row align-items-center justify-content-between">
-                                    <!-- site-branding -->
-                                    <div class="site-branding ">
-                                        <a class="home-link" href="index-2.html" title="Fablio" rel="home">
-                                            <img id="logo-img" height="37" width="138" class="img-fluid auto_size"
-                                                src="images/logo.png" alt="logo-img">
-                                        </a>
-                                    </div><!-- site-branding end -->
-                                    <div class="d-flex flex-row m-auto">
-                                        <div class="btn-show-menu-mobile menubar menubar--squeeze">
-                                            <span class="menubar-box">
-                                                <span class="menubar-inner"></span>
-                                            </span>
-                                        </div>
-                                        <!-- menu -->
-                                        <nav class="main-menu menu-mobile" id="menu">
-                                            <ul class="menu">
-                                                <li class="mega-menu-item">
-                                                <li><a href="index.html">Home</a></li>
-
-                                                </li>
-
-                                                <li class="mega-menu-item" id="desktop-menu">
-                                                    <a href="#" class="mega-menu-link">Showcase</a>
-                                                    <ul class="mega-submenu" style="width:30rem;">
-
-                                                        <li class="mega-submenu-split">
-                                                            <div class="mega-submenu-split-section"
-                                                                style="padding-left:2rem">
-                                                                <h3>Ready to wear</h3>
-                                                                <ul style="margin-left:-8rem;">
-                                                                    <li><a href="showcase/jacket.html">Coats &
-                                                                            Jackets</a></li>
-
-                                                                    <li><a href="showcase/tops.html">Top & Blouse</a>
-                                                                    </li>
-                                                                    <li><a href="showcase/dresses.html">Dresses</a></li>
-
-                                                                    <li><a href="showcase/bottoms_Jumpsuits.html">Bottoms
-                                                                            & Jumpsuits</a></li>
-                                                                    <li><a href="showcase/knitwerar.html">Knitwerar</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <!-- <div class="mega-submenu-split-section" style="padding-right:5rem">
-                                                                <h3>Accessories</h3>
-                                                                <ul style="margin-left:-8rem;">
-                                                                    
-                                                                    <li><a href="showcase/footwear.html">Footwear </a></li>
-                                                                    <li><a href="showcase/bags.html">Handbags</a></li>
-                                                                    <li><a href="showcase/jewellery.html">Jewellery</a></li>
-                                                                   <li><a href="showcase/belts.html">Belts</a></li>
-                                                                   
-                                                                </ul>
-                                                            </div> -->
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-
-                                                <li class="mega-menu-item active">
-                                                    <a href="about-us.html">About Us</a>
-
-                                                </li>
-
-                                                <li class="mega-menu-item" id='mobile-menu'>
-                                                    <a href="showcase/index.html" class="mega-menu-link">Showecase</a>
-                                                    <ul class="mega-submenu">
-                                                        <li><a style="font-weight:700; font-size:.9rem">Ready to
-                                                                Wear</a></li>
-                                                        <li><a href="showcase/jacket.html">Coats & Jackets</a></li>
-                                                        <li><a href="showcase/dresses.html">Dresses</a></li>
-                                                        <li><a href="showcase/tops.html">Top & Blouse</a></li>
-
-                                                        <li><a href="showcase/bottoms_Jumpsuits.html">Bottoms &
-                                                                Jumpsuits</a></li>
-                                                        <li><a href="showcase/knitwerar.html">Knitwerar</a></li>
-
-                                                        <!-- <li><a style="font-weight:700;font-size:.9rem">Accessories</a></li>
-                                                        <li><a href="showcase/footwear.html">Footwear </a></li>
-                                                        <li><a href="showcase/bags.html">Handbags</a></li>
-                                                        <li><a href="showcase/jewellery.html">Jewellery</a></li>
-                                                         <li><a href="showcase/belts.html">Belts</a></li> -->
-                                                    </ul>
-                                                </li>
-
-                                                <li class="mega-menu-item">
-                                                    <a href="garment-manufacturing.html"
-                                                        class="mega-menu-link">Services</a>
-                                                    <ul class="mega-submenu">
-                                                        <li><a href="garment-manufacturing.html">Garment
-                                                                Manufacturing</a></li>
-                                                        <li><a href="garment-designing.html">Garment Designing</a></li>
-                                                        <li><a href="fabric-trim-sourcing.html">Fabric & trim
-                                                                sourcing</a></li>
-                                                        <!-- <li><a href="embroidery-designing.html">Embrioidery Designing</a></li> -->
-                                                        <li><a href="product-development.html">Product Development</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <!-- <li class="mega-menu-item">
-                                                   <li><a href="clients.html">Clients</a></li>    
-                                                </li> -->
-                                                <li class="mega-menu-item">
-                                                    <a href="blog.html">Blog</a>
-                                                </li>
-
-                                                <li class="mega-menu-item">
-                                                    <a href="contact-us.html">Contact us</a>
-                                                </li>
-                                            </ul>
-                                        </nav><!-- menu end -->
-                                    </div>
-                                    <div class="widget_info d-flex flex-row align-items-center">
-                                        <div class="widget_icon ttm-textcolor-skincolor"><i class="flaticon-email"></i>
-                                        </div>
-                                        <div class="widget_content">
-                                            <h3 class="widget_title">
-                                                <a href="mailto:Adafeng@Cyncho.com">Adafeng@Cyncho.com</a>
-                                            </h3>
-
-                                        </div>
-                                    </div>
-                                </div><!-- site-navigation end-->
+                                <div class="ttm-bgcolor-white p-10" style="margin-top:10vh">
+                                    <p style="padding:2rem;">
+                                        Dongguan CYNCHO Garment Factory
+                                        <br>
+                                        Established 2010 | Specializing in Premium Apparel Manufacturing
+                                        <br>
+                                        <br>
+                                        Evolving from a small sewing workshop, we now operate with:
+                                        <br>
+                                        50+ professional technicians | 40+ advanced sewing stations | Annual output 300,000+ pieces
+                                        <br>
+                                        <br>
+                                        Full-category solutions:
+                                        <br>
+                                        Self-owned woven factory: Shirts/Dresses/Jackets/Coats & other woven apparel expertise
+                                        <br>
+                                        Strategic knitwear partner: Year-round sweaters & knitwear production capabilities
+                                        <br>
+                                        <br>
+                                        Three Key Guarantees:
+                                        <br>
+                                        Global Compliance Access
+                                        <br>
+                                        Full certifications: SEDEX (Ethical), GOTS (Organic), GRS/RWS (Eco-Materials)
+                                        <br>
+                                        Meets stringent EU/NA market entry requirements
+                                        <br>
+                                        Superior Quality Control
+                                        <br>
+                                        2% defect rate (Industry average: 3.5%-5%)
+                                        <br>
+                                        Third-party inspection agency on-site monitoring
+                                        <br>
+                                        End-to-End Service
+                                        <br>
+                                        Dedicated teams for prototyping → production → packing → logistics
+                                        <br>
+                                        Supports small-batch rapid orders (15-day sampling cycle)
+                                        <br>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- site-header-menu end-->
-        </header><!--header end-->
-
-
-        <!-- page-title -->
-        <div class="ttm-page-title-row ttm-bg ttm-bgimage-yes ttm-bgcolor-darkgrey clearfix">
-            <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
-            <div class="container">
-                <div class="row align-items-center">
+                </section>
+                <!--services-section end-->
+                <div class="row">
                     <div class="col-lg-12">
-                        <div class="ttm-page-title-row-inner">
-                            <div class="page-title-heading">
-                                <h1 class="title">About Us</h1>
-                            </div>
-                            <div class="breadcrumb-wrapper">
-                                <span>
-                                    <a title="Homepage" href="index-2.html">Home</a>
-                                </span>
-                                <span>About Us</span>
+                        <!-- section-title -->
+                        <div class="section-title title-style-center_text">
+                            <div class="title-header">
+                                <h2 class="title" style="margin-top: 2rem; font-size: 35px;">
+                                    <b>Sustainability</b>
+                                    and
+                                    <b>Corporate Social Responsibility</b>
+                                </h2>
                             </div>
                         </div>
+                        <!-- section-title end -->
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- page-title end -->
-
-
-        <!--site-main start-->
-        <div class="site-main">
-
-
-            <!--about-section-->
-            <section class="ttm-row about-section clearfix">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-6 col-sm-8">
-                            <div class="ttm_single_image-wrapper">
-                                <img class="img-fluid auto_size" width="375" height="524" src="images/about_us_2.jpg"
-                                    alt="single-07">
-                            </div>
-                        </div>
-                        <div class="col-lg-7 col-md-12 col-xs-12">
-                            <div class="padding_left30 padding_top20 res-991-padding_left0 res-991-padding_top40">
-                                <!-- section title -->
-                                <div class="section-title">
-                                    <div class="title-header">
-                                        <h3>WHO WE ARE</h3>
-                                        <h2 class="title">DONGGUAN CYNCHO GARMENTS CO. ltd ORIGINAL GARMENTS FACTORY
-                                        </h2>
-                                    </div>
-                                    <div class="title-desc">
-                                        <p>Dongguan CYNCHO Garment Factory was established in 2010, is a small sewing
-                                            machine workshop slowly evolved, now the factory is equipped with the number
-                                            of people 30-50
-                                            people, 40 parking spaces, the annual output of more than 300,000 pieces,
-                                            the establishment of an independent production department, packaging
-                                            department, sample sewing department, follow up on the orders of the
-                                            department. Sample sewing department, follow up department, cutting
-                                            department, At present, the company has a wholly-owned woven factory,
-                                            specializing in the production of all kinds of woven women's and men's
-                                            apparel, like top, shirt, pant,dress, jacket,coat, There is also an invested
-                                            woolen factory that produces all kinds of knitted and sweater clothes.
-                                            Our factory has a complete set of complete production system, through the
-                                            SEDEX and GOTS GRS RWS certification, hope to be able to a new look of
-                                            quality service and high-end quality to
-                                            better serve our customers.</p>
-                                    </div>
-                                </div><!-- section title end -->
-                                <div class="ttm-horizontal_sep width-100 padding_top30"></div>
-
-
-                                <div class="d-inline-block margin_top15">
-
-                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-dark margin_top15"
-                                        href="contact-us.html">contact us</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- row end -->
-                </div>
-            </section>
-            <!--about-section end-->
-
-
-            <!--services-section-->
-            <section class="ttm-row service-section ttm-bgcolor-grey position-relative z-index-2 clearfix">
-                <div class="container">
-                    <!-- row -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <!-- section-title -->
-                            <div class="section-title title-style-center_text">
-                                <div class="title-header">
-
-                                    <h2 class="title">We are pround of these</h2>
-                                </div>
-                            </div><!-- section-title end -->
-                        </div>
-                    </div>
-                    <!-- row end -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="featuredbox-number">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <!--featured-icon-box-->
-                                        <div class="featured-icon-box icon-align-top-content style5">
-                                            <i class="ttm-num ti-info"></i>
-                                            <div class="featured-icon">
-                                                <div
-                                                    class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
-                                                    <i class="flaticon flaticon-textile-1"></i>
-                                                </div>
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3>Time</h3>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p>Fast Production time10days.</p>
-                                                </div>
-                                            </div>
-                                        </div><!-- featured-icon-box end-->
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <!--featured-icon-box-->
-                                        <div class="featured-icon-box icon-align-top-content style5">
-                                            <i class="ttm-num ti-info"></i>
-                                            <div class="featured-icon">
-                                                <div
-                                                    class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
-                                                    <i class="flaticon flaticon-silk"></i>
-                                                </div>
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3>Cert</h3>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p>GOTS&GRS&RWS fabric&Yarn Cert,we have our own woven clothes
-                                                        factoryand knit clothes factory,meet customers four sean
-                                                        request.</p>
-                                                </div>
-                                            </div>
-                                        </div><!-- featured-icon-box end-->
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <!--featured-icon-box-->
-                                        <div class="featured-icon-box icon-align-top-content style5">
-                                            <i class="ttm-num ti-info"></i>
-                                            <div class="featured-icon">
-                                                <div
-                                                    class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
-                                                    <i class="flaticon flaticon-moisture-wicking-fabric"></i>
-                                                </div>
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3>Quality&Solution</h3>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p>high quality sewning&accpetOEM&accept low MOQ.</p>
-                                                </div>
-                                            </div>
-                                        </div><!-- featured-icon-box end-->
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="ttm-bgcolor-white p-10" style="margin-top:10vh">
-                                <p style="padding:2rem;">
-                                    Dongguan CYNCHO Garment Factory<br>
-                                    Established 2010 | Specializing in Premium Apparel Manufacturing<br><br>
-                                    Evolving from a small sewing workshop, we now operate with:<br>
-                                    50+ professional technicians | 40+ advanced sewing stations | Annual output 300,000+
-                                    pieces<br><br>
-                                    Full-category solutions:<br>
-                                    Self-owned woven factory: Shirts/Dresses/Jackets/Coats & other woven apparel
-                                    expertise<br>
-                                    Strategic knitwear partner: Year-round sweaters & knitwear production
-                                    capabilities<br><br>
-                                    Three Key Guarantees:<br>
-                                    Global Compliance Access<br>
-                                    Full certifications: SEDEX (Ethical), GOTS (Organic), GRS/RWS (Eco-Materials)<br>
-                                    Meets stringent EU/NA market entry requirements<br>
-                                    Superior Quality Control<br>
-                                    2% defect rate (Industry average: 3.5%-5%)<br>
-                                    Third-party inspection agency on-site monitoring<br>
-                                    End-to-End Service<br>
-                                    Dedicated teams for prototyping → production → packing → logistics<br>
-                                    Supports small-batch rapid orders (15-day sampling cycle)<br>
+                            <div class="ttm-bgcolor-white p-10">
+                                <p>
+                                    Cyncho Garments happens to be amongst the first
+                                    <b>
+                                        <a href="index.html">Garments exporters</a>
+                                    </b>
+                                    in china, to measure our carbon footprint. The organization's other steps towards making the world a better place to live includes:
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            </section>
-
-            <!--services-section end-->
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- section-title -->
-                    <div class="section-title title-style-center_text">
-                        <div class="title-header">
-
-                            <h2 class="title" style="margin-top: 2rem; font-size: 35px;"> <b> Sustainability </b> and
-                                <b> Corporate Social Responsibility </b> </h2>
+                <!-- padding_zero-section -->
+                <section class="ttm-row padding_zero-section clearfix">
+                    <div class="container">
+                        <!-- row -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="featuredbox-number mb_90 res-991-margin_bottom0 mt_15 res-991-margin_top0">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-6 col-sm-6">
+                                            <!--featured-icon-box-->
+                                            <div class="featured-icon-box icon-align-top-content style7">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-fill ttm-icon_element-size-sm ttm-icon_element-color-skincolor ttm-icon_element-style-square">
+                                                        <span class="fea_num">
+                                                            <i class="ttm-num ti-info">
+                                                            </i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>FABRICS</h3>
+                                                    </div>
+                                                    <div class="featured-desc">
+                                                        <p>
+                                                            Cyncho Garments consciously offers Global Organic Textile Standard (GOTS GRS RWS) certified organic fabrics to its customers. All the manufacturing units are end-end GOTS GRS RWS certified.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- featured-icon-box end-->
+                                        </div>
+                                        <div class="col-lg-12 col-md-6 col-sm-6">
+                                            <!--featured-icon-box-->
+                                            <div class="featured-icon-box icon-align-top-content style7">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-fill ttm-icon_element-size-sm ttm-icon_element-color-skincolor ttm-icon_element-style-square">
+                                                        <span class="fea_num">
+                                                            <i class="ttm-num ti-info">
+                                                            </i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>POLYBAGS</h3>
+                                                    </div>
+                                                    <div class="featured-desc">
+                                                        <p>
+                                                            We can help to source and produce bi0 -degradable bags/paper bags in China, which all process is Sustainable aswell.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- featured-icon-box end-->
+                                        </div>
+                                        <div class="col-lg-12 col-md-6 col-sm-6">
+                                            <!--featured-icon-box-->
+                                            <div class="featured-icon-box icon-align-top-content style7">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-fill ttm-icon_element-size-sm ttm-icon_element-color-skincolor ttm-icon_element-style-square">
+                                                        <span class="fea_num">
+                                                            <i class="ttm-num ti-info">
+                                                            </i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>THREADS</h3>
+                                                    </div>
+                                                    <div class="featured-desc">
+                                                        <p>
+                                                            The thread which Our knitting factory used are GOTS and GRS certified as well as RWS cert with wool yarn.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- featured-icon-box end-->
+                                        </div>
+                                        <div class="col-lg-12 col-md-6 col-sm-6">
+                                            <!--featured-icon-box-->
+                                            <div class="featured-icon-box icon-align-top-content style7">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-fill ttm-icon_element-size-sm ttm-icon_element-color-skincolor ttm-icon_element-style-square">
+                                                        <span class="fea_num">
+                                                            <i class="ttm-num ti-info">
+                                                            </i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>FACTORIES</h3>
+                                                    </div>
+                                                    <div class="featured-desc">
+                                                        <p>
+                                                            Cyncho currently has 2 factories, one woven factory which can make all kind of woven clothes,ietoemsrt sa etsat pars siesmoaakgitag factorhf a sandmakeall kinds of knitting/iersey clothes, knit cardigan, pulloverpant, dress.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- featured-icon-box end-->
+                                        </div>
+                                        <div class="col-lg-12 col-md-6 col-sm-6">
+                                            <!--featured-icon-box-->
+                                            <div class="featured-icon-box icon-align-top-content style7" style="padding-bottom: rem;">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-fill ttm-icon_element-size-sm ttm-icon_element-color-skincolor ttm-icon_element-style-square">
+                                                        <span class="fea_num">
+                                                            <i class="ttm-num ti-info">
+                                                            </i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>VEHICLES</h3>
+                                                    </div>
+                                                    <div class="featured-desc">
+                                                        <p>
+                                                            We have replaced all the diesel and petrol guzzling cars of the company with hybrid vehicles and vehicles using CNG.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- featured-icon-box end-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div><!-- section-title end -->
-
-                </div>
-            </div>
-
-            <div class="container">
+                        <!-- row end -->
+                    </div>
+                </section>
+                <!-- padding_zero-section end -->
+                <!--padding_top_zero-section-->
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="ttm-bgcolor-white p-10">
-                            <p>
-                                Cyncho Garments happens to be amongst the first <b><a href="index.html">Garments
-                                        exporters</a></b> in china, to measure our carbon footprint. The organization's
-                                other steps towards making the world a better place to live includes:</p>
+                    <div class="col-lg-12" style="margin-top: 9rem;">
+                        <!-- section-title -->
+                    </div>
+                </div>
+                <section class="ttm-row padding_top_zero-section ttm-bgcolor-grey clearfix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="ttm-bgcolor-skincolor p-30" style="margin-top:5rem">
+                                    <div class="row ttm-vertical_sep">
+                                        <div class="col-lg-4 col-md-4 col-sm-6">
+                                            <!-- ttm-fid -->
+                                            <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style3" style="padding-left: 5rem;">
+                                                <div class="ttm-fid-icon-wrapper">
+                                                    <i class="ti ti-user">
+                                                    </i>
+                                                </div>
+                                                <div class="ttm-fid-contents">
+                                                    <h4 class="ttm-fid-inner">
+                                                        <span data-appear-animation="animateDigits" data-from="0" data-to="50" data-interval="5" data-before="" data-before-style="sup" data-after="+" data-after-style="sub" class="numinate">50 +</span>
+                                                        <span>+</span>
+                                                    </h4>
+                                                </div>
+                                                <h3 class="ttm-fid-title">Employees</h3>
+                                            </div>
+                                            <!-- ttm-fid end -->
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6">
+                                            <!-- ttm-fid -->
+                                            <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style3" style="padding-left: 5rem;">
+                                                <div class="ttm-fid-icon-wrapper">
+                                                    <i class="ti ti-crown">
+                                                    </i>
+                                                </div>
+                                                <div class="ttm-fid-contents">
+                                                    <h4 class="ttm-fid-inner">
+                                                        <span data-appear-animation="animateDigits" data-from="0" data-to="70" data-interval="5" data-before="" data-before-style="sup" data-after="+" data-after-style="sub" class="numinate">70</span>
+                                                        <span>%</span>
+                                                    </h4>
+                                                </div>
+                                                <h3 class="ttm-fid-title">Women Workers</h3>
+                                            </div>
+                                            <!-- ttm-fid end -->
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6">
+                                            <!-- ttm-fid -->
+                                            <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style3" style="padding-left: 5rem;">
+                                                <div class="ttm-fid-icon-wrapper">
+                                                    <i class="ti ti-star">
+                                                    </i>
+                                                </div>
+                                                <div class="ttm-fid-contents">
+                                                    <h4 class="ttm-fid-inner">
+                                                        <span data-appear-animation="animateDigits" data-from="0" data-to="15" data-interval="1" data-before="" data-before-style="sup" data-after="+" data-after-style="sub" class="numinate">15</span>
+                                                        <span>+</span>
+                                                    </h4>
+                                                </div>
+                                                <h3 class="ttm-fid-title">High Fashion Brands</h3>
+                                            </div>
+                                            <!-- ttm-fid end -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="ttm-row about-gallery-section clearfix">
+                    <div class="container">
+                        <div class="section-title title-style-center_text">
+                            <div class="title-header">
+                                <h2 class="title">Visual Showcase</h2>
+                            </div>
+                            <div class="title-desc">
+                                <p>A quick gallery of the fabrics, production details, and workspace atmosphere behind our brand.</p>
+                            </div>
+                        </div>
+                        <div class="row slick_slider about-gallery-slider slick-arrows-style1 slick-dots-style1" data-slick='{"slidesToShow":3,"slidesToScroll":1,"arrows":true,"dots":true,"autoplay":true,"autoplaySpeed":2400,"infinite":true,"responsive":[{"breakpoint":1100,"settings":{"slidesToShow":2}},{"breakpoint":575,"settings":{"slidesToShow":1}}]}'>
+                            <div class="col-lg-4">
+                                <div class="about-gallery-card">
+                                    <div class="about-gallery-media">
+                                        <a class="about-gallery-preview" href="images/about_01.png" data-index="0" aria-label="Preview image 1">
+                                            <img src="images/about_01.png" alt="About gallery image 1">
+                                        </a>
+                                    </div>
+                                    <div class="about-gallery-caption">01</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="about-gallery-card">
+                                    <div class="about-gallery-media">
+                                        <a class="about-gallery-preview" href="images/about_02.png" data-index="1" aria-label="Preview image 2">
+                                            <img src="images/about_02.png" alt="About gallery image 2">
+                                        </a>
+                                    </div>
+                                    <div class="about-gallery-caption">02</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="about-gallery-card">
+                                    <div class="about-gallery-media">
+                                        <a class="about-gallery-preview" href="images/about_03.png" data-index="2" aria-label="Preview image 3">
+                                            <img src="images/about_03.png" alt="About gallery image 3">
+                                        </a>
+                                    </div>
+                                    <div class="about-gallery-caption">03</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="about-gallery-card">
+                                    <div class="about-gallery-media">
+                                        <a class="about-gallery-preview" href="images/about_04.png" data-index="3" aria-label="Preview image 4">
+                                            <img src="images/about_04.png" alt="About gallery image 4">
+                                        </a>
+                                    </div>
+                                    <div class="about-gallery-caption">04</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="about-gallery-card">
+                                    <div class="about-gallery-media">
+                                        <a class="about-gallery-preview" href="images/about_05.png" data-index="4" aria-label="Preview image 5">
+                                            <img src="images/about_05.png" alt="About gallery image 5">
+                                        </a>
+                                    </div>
+                                    <div class="about-gallery-caption">05</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="about-gallery-card">
+                                    <div class="about-gallery-media">
+                                        <a class="about-gallery-preview" href="images/about_06.png" data-index="5" aria-label="Preview image 6">
+                                            <img src="images/about_06.png" alt="About gallery image 6">
+                                        </a>
+                                    </div>
+                                    <div class="about-gallery-caption">06</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="about-gallery-card">
+                                    <div class="about-gallery-media">
+                                        <a class="about-gallery-preview" href="images/about_07.png" data-index="6" aria-label="Preview image 7">
+                                            <img src="images/about_07.png" alt="About gallery image 7">
+                                        </a>
+                                    </div>
+                                    <div class="about-gallery-caption">07</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--padding_top_zero-section end-->
+                <!--team-section-->
+                <!--team-section end-->
+                <!-- New Client Section -->
+                <section class="ttm-row client-section ttm-bgcolor-grey clearfix" style="display: none;">
+                    <div class="container" style="margin-bottom:2rem; margin-top: 1rem;">
+                        <div class="mb_15 row slick_slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows":false, "dots":false, "autoplay":true, "autoplaySpeed": 300, "infinite":true, "responsive": [{"breakpoint":1100,"settings":{"slidesToShow": 3}} , {"breakpoint":777,"settings":{"slidesToShow": 2}}, {"breakpoint":575,"settings":{"slidesToShow": 1}}]}'>
+                            <div class="col-lg-4">
+                                <!-- featured-imagebox-team -->
+                                <div class="featured-imagebox featured-imagebox-team style1">
+                                    <div class="ttm-team-box-view-overlay">
+                                        <div class="featured-iconbox ttm-media-link">
+                                        </div>
+                                        <div class="featured-thumbnail">
+                                            <img class="img-fluid" src="images/IsabelMarant_car.png" style="width:320px;" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- featured-imagebox-team end-->
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- featured-imagebox-team -->
+                                <div class="featured-imagebox featured-imagebox-team style1">
+                                    <div class="ttm-team-box-view-overlay">
+                                        <div class="featured-iconbox ttm-media-link">
+                                        </div>
+                                        <div class="featured-thumbnail">
+                                            <img class="img-fluid" src="images/Bonpoint_car.png" style="width:320px;" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- featured-imagebox-team end-->
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- featured-imagebox-team -->
+                                <div class="featured-imagebox featured-imagebox-team style1">
+                                    <div class="ttm-team-box-view-overlay">
+                                        <div class="featured-iconbox ttm-media-link">
+                                        </div>
+                                        <div class="featured-thumbnail">
+                                            <img class="img-fluid" src="images/rhode_car.png" style="width:320px;" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- featured-imagebox-team end-->
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- featured-imagebox-team -->
+                                <div class="featured-imagebox featured-imagebox-team style1">
+                                    <div class="ttm-team-box-view-overlay">
+                                        <div class="featured-iconbox ttm-media-link">
+                                        </div>
+                                        <div class="featured-thumbnail">
+                                            <img class="img-fluid" src="images/spell_car.png" style="width:320px;" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- featured-imagebox-team end-->
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- featured-imagebox-team -->
+                                <div class="featured-imagebox featured-imagebox-team style1">
+                                    <div class="ttm-team-box-view-overlay">
+                                        <div class="featured-iconbox ttm-media-link">
+                                        </div>
+                                        <div class="featured-thumbnail">
+                                            <img class="img-fluid" src="images/ToryBurch_car.png" style="width:320px;" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- featured-imagebox-team end-->
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- featured-imagebox-team -->
+                                <div class="featured-imagebox featured-imagebox-team style1">
+                                    <div class="ttm-team-box-view-overlay">
+                                        <div class="featured-iconbox ttm-media-link">
+                                        </div>
+                                        <div class="featured-thumbnail">
+                                            <img class="img-fluid" src="images/Loveshank_car.png" style="width:320px;" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- featured-imagebox-team end-->
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- featured-imagebox-team -->
+                                <div class="featured-imagebox featured-imagebox-team style1">
+                                    <div class="ttm-team-box-view-overlay">
+                                        <div class="featured-iconbox ttm-media-link">
+                                        </div>
+                                        <div class="featured-thumbnail">
+                                            <img class="img-fluid" src="images/Doen_car.png" style="width:320px;" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- featured-imagebox-team end-->
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- featured-imagebox-team -->
+                                <div class="featured-imagebox featured-imagebox-team style1">
+                                    <div class="ttm-team-box-view-overlay">
+                                        <div class="featured-iconbox ttm-media-link">
+                                        </div>
+                                        <div class="featured-thumbnail">
+                                            <img class="img-fluid" src="images/Sezane_car.png" style="width:320px;" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- featured-imagebox-team end-->
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- featured-imagebox-team -->
+                                <div class="featured-imagebox featured-imagebox-team style1">
+                                    <div class="ttm-team-box-view-overlay">
+                                        <div class="featured-iconbox ttm-media-link">
+                                        </div>
+                                        <div class="featured-thumbnail">
+                                            <img class="img-fluid" src="images/UllaJohnson_car.png" style="width:320px;" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- featured-imagebox-team end-->
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- featured-imagebox-team -->
+                                <div class="featured-imagebox featured-imagebox-team style1">
+                                    <div class="ttm-team-box-view-overlay">
+                                        <div class="featured-iconbox ttm-media-link">
+                                        </div>
+                                        <div class="featured-thumbnail">
+                                            <img class="img-fluid" src="images/iro_car.png" style="width:320px;" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- featured-imagebox-team end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--client-section end-->
+            </div>
+            <!--site-main end-->
+            <!--footer start-->
+            <footer class="footer widget-footer ttm-bgcolor-darkgrey ttm-textcolor-white clearfix">
+                <div class="first-footer" style="margin-top: -2rem;padding: 0">
+                    <div class="container" style="margin-bottom: -1rem;">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 widget-area">
+                                <div class="widget widget_text clearfix">
+                                    <div class="d-sm-flex align-items-center">
+                                        <div class="footer-logo">
+                                            <!-- <img id="footer-logo-img" class="img-fluid auto_size" height="46" width="170" src="images/logo.png" alt="image"> -->
+                                        </div>
+                                        <div class="textwidget widget-text">
+                                            <p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 widget-area">
+                                <div class="widget widget_social clearfix">
+                                    <div class="top_bar_contact_item top_bar_social ml-auto p-0">
+                                        <ul class="social-icons list-inline">
+                                            <!-- <li><a class="tooltip-top" href="#" rel="noopener" aria-label="facebook" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                                                                <li><a class="tooltip-top" href="#" rel="noopener" aria-label="twitter" data-tooltip="Twitter"><i class="fa fa-twitter"></i></a></li> -->
+                                            <li>
+                                                <a class="tooltip-top" href="https://www.instagram.com/cyncho__/" rel="noopener" aria-label="instagram" data-tooltip="instagram">
+                                                    <i class="fa fa-instagram">
+                                                    </i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="tooltip-top" href="https://www.linkedin.com/company/95056818/admin/page-posts/published/" rel="noopener" aria-label="linkedin" data-tooltip="Linkedin">
+                                                    <i class="fa fa-linkedin">
+                                                    </i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 widget-area">
+                                <div class="widget widget_text margin_right10 clearfix">
+                                    <h3 class="widget-title">About Us</h3>
+                                    <div class="textwidget widget-text">
+                                        <div class="call_detail">
+                                            <div class="padding_top10 padding_bottom10">
+                                                <p>
+                                                    Dongguan CYNCHO Garment Factory was established in 2010, is a small sewing machine workshop slowly evolved, now the factory is equipped with the number of people 30-50 people, 40 parking spaces, the annual output of more than 300,000 pieces, At present, the company has a wholly-owned woven factory, specializing in the production of all kinds of woven women's and men's apparel, like top, shirt, pant,dress, jacket,coat, There is also an invested woolen factory that produces all kinds of knitted and sweater clothes. Our factory has a complete set of complete production system, through the SEDEX and GOTS GRS RWS certification, hope to be able to a new look of quality service and high-end quality to better serve our customers.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                                <div class="widget widget_nav_menu clearfix">
+                                    <h3 class="widget-title">Our Services</h3>
+                                    <ul id="menu-footer-quick-links" class="menu">
+                                        <li>
+                                            <a href="garment-manufacturing.html">Garment Manufacturing</a>
+                                        </li>
+                                        <li>
+                                            <a href="garment-designing.html">Garment Designing</a>
+                                        </li>
+                                        <li>
+                                            <a href="fabric-trim-sourcing.html">Fabric & Trim Sourcing</a>
+                                        </li>
+                                        <!-- <li><a href="embroidery-designing.html">Embroidery Designing</a></li> -->
+                                        <li>
+                                            <a href="product-development.html">Product Development</a>
+                                        </li>
+                                        <!-- <li><a href="privacy-policy.pdf" target="_blank">Privacy Policy</a></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 widget-area">
+                                <div class="widget widget-latest-tweets clearfix">
+                                    <h3 class="widget-title">Contact Us</h3>
+                                    <ul class="widget_contact_wrapper">
+                                        <li>
+                                            <i class="ttm-textcolor-skincolor fa fa-map-marker">
+                                            </i>
+                                            No.1, Lane 1, Youwu, Subian Village, Chashan Town, Dongguan, China
+                                        </li>
+                                        <li>
+                                            <i class="ttm-textcolor-skincolor fa fa-phone">
+                                            </i>
+                                            <a href="tel:86-15876452036" onclick="return confirm('Do you want to call 86-15876452036?');">86-15876452036</a>
+                                        </li>
+                                        <li style="white-space:nowrap ;">
+                                            <i class="ttm-textcolor-skincolor fa fa-envelope-o">
+                                            </i>
+                                            <a href="mailto:Adafeng@Cyncho.com">Adafeng@Cyncho.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 widget-area">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-footer-text copyright">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="text-left">
+                                        <span class="cpy-text">
+                                            © 2026
+                                            <a href="#" class="ttm-textcolor-skincolor font-weight-500">Cyncho Garments Co.,ltd</a>
+                                            All rights reserved.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!--footer end-->
+                <!--back-to-top start-->
+                <a id="totop" href="#top">
+                    <i class="fa fa-angle-up">
+                    </i>
+                </a>
+                <!--back-to-top end-->
+            </div>
+            <!-- page end -->
+            <div class="about-gallery-lightbox" id="aboutGalleryLightbox" aria-hidden="true">
+                <div class="about-gallery-lightbox-backdrop" id="aboutGalleryBackdrop">
+                </div>
+                <div class="about-gallery-lightbox-panel" role="dialog" aria-modal="true" aria-label="About gallery preview">
+                    <div class="about-gallery-lightbox-toolbar">
+                        <div class="about-gallery-lightbox-counter" id="aboutGalleryCounter">1 / 7</div>
+                        <button type="button" class="about-gallery-lightbox-close" id="aboutGalleryClose" aria-label="Close preview">&times;</button>
+                    </div>
+                    <div class="about-gallery-lightbox-content">
+                        <button type="button" class="about-gallery-lightbox-nav about-gallery-lightbox-prev" id="aboutGalleryPrev" aria-label="Previous image">&#10094;</button>
+                        <img id="aboutGalleryPreviewImage" src="" alt="Gallery preview">
+                        <button type="button" class="about-gallery-lightbox-nav about-gallery-lightbox-next" id="aboutGalleryNext" aria-label="Next image">&#10095;</button>
                     </div>
                 </div>
             </div>
-            <!-- padding_zero-section -->
-            <section class="ttm-row padding_zero-section clearfix">
-                <div class="container">
-                    <!-- row -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="featuredbox-number mb_90 res-991-margin_bottom0 mt_15 res-991-margin_top0">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-sm-6">
-                                        <!--featured-icon-box-->
-                                        <div class="featured-icon-box icon-align-top-content style7">
-                                            <div class="featured-icon">
-                                                <div
-                                                    class="ttm-icon ttm-icon_element-fill ttm-icon_element-size-sm ttm-icon_element-color-skincolor ttm-icon_element-style-square">
-                                                    <span class="fea_num">
-                                                        <i class="ttm-num ti-info"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3>FABRICS</h3>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p>Cyncho Garments consciously offers Global Organic Textile
-                                                        Standard (GOTS GRS RWS) certified organic fabrics to its
-                                                        customers. All the manufacturing units are end-end GOTS GRS RWS
-                                                        certified.</p>
-                                                </div>
-                                            </div>
-                                        </div><!-- featured-icon-box end-->
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-6 col-sm-6">
-                                        <!--featured-icon-box-->
-                                        <div class="featured-icon-box icon-align-top-content style7">
-                                            <div class="featured-icon">
-                                                <div
-                                                    class="ttm-icon ttm-icon_element-fill ttm-icon_element-size-sm ttm-icon_element-color-skincolor ttm-icon_element-style-square">
-                                                    <span class="fea_num">
-                                                        <i class="ttm-num ti-info"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3>POLYBAGS</h3>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p>We can help to source and produce bi0 -degradable bags/paper bags
-                                                        in China, which all process is Sustainable aswell.</p>
-                                                </div>
-                                            </div>
-                                        </div><!-- featured-icon-box end-->
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-6 col-sm-6">
-                                        <!--featured-icon-box-->
-                                        <div class="featured-icon-box icon-align-top-content style7">
-                                            <div class="featured-icon">
-                                                <div
-                                                    class="ttm-icon ttm-icon_element-fill ttm-icon_element-size-sm ttm-icon_element-color-skincolor ttm-icon_element-style-square">
-                                                    <span class="fea_num">
-                                                        <i class="ttm-num ti-info"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3>THREADS</h3>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p>The thread which Our knitting factory used are GOTS and GRS
-                                                        certified as well as RWS cert with wool yarn.</p>
-                                                </div>
-                                            </div>
-                                        </div><!-- featured-icon-box end-->
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-6 col-sm-6">
-                                        <!--featured-icon-box-->
-                                        <div class="featured-icon-box icon-align-top-content style7">
-                                            <div class="featured-icon">
-                                                <div
-                                                    class="ttm-icon ttm-icon_element-fill ttm-icon_element-size-sm ttm-icon_element-color-skincolor ttm-icon_element-style-square">
-                                                    <span class="fea_num">
-                                                        <i class="ttm-num ti-info"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3>FACTORIES</h3>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p>Cyncho currently has 2 factories, one woven factory which can
-                                                        make all kind of woven clothes,ietoemsrt sa etsat pars
-                                                        siesmoaakgitag factorhf a sandmakeall kinds of knitting/iersey
-                                                        clothes, knit cardigan, pulloverpant, dress.</p>
-                                                </div>
-                                            </div>
-                                        </div><!-- featured-icon-box end-->
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-6 col-sm-6">
-                                        <!--featured-icon-box-->
-                                        <div class="featured-icon-box icon-align-top-content style7"
-                                            style="padding-bottom: rem;">
-                                            <div class="featured-icon">
-                                                <div
-                                                    class="ttm-icon ttm-icon_element-fill ttm-icon_element-size-sm ttm-icon_element-color-skincolor ttm-icon_element-style-square">
-                                                    <span class="fea_num">
-                                                        <i class="ttm-num ti-info"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3>VEHICLES</h3>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p>We have replaced all the diesel and petrol guzzling cars of the
-                                                        company with hybrid vehicles and vehicles using CNG.</p>
-                                                </div>
-                                            </div>
-                                        </div><!-- featured-icon-box end-->
-                                    </div>
-
-
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- row end -->
-                </div>
-            </section>
-            <!-- padding_zero-section end -->
-
-
-
-            <!--padding_top_zero-section-->
-
-            <div class="row">
-                <div class="col-lg-12" style="margin-top: 9rem;">
-                    <!-- section-title -->
-
-                </div>
-            </div>
-
-            <section class="ttm-row padding_top_zero-section ttm-bgcolor-grey clearfix">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-12">
-                            <div class="ttm-bgcolor-skincolor p-30" style="margin-top:5rem">
-                                <div class="row ttm-vertical_sep">
-
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <!-- ttm-fid -->
-                                        <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style3"
-                                            style="padding-left: 5rem;">
-                                            <div class="ttm-fid-icon-wrapper">
-                                                <i class="ti ti-user"></i>
-                                            </div>
-                                            <div class="ttm-fid-contents">
-                                                <h4 class="ttm-fid-inner">
-                                                    <span data-appear-animation="animateDigits" data-from="0"
-                                                        data-to="50" data-interval="5" data-before=""
-                                                        data-before-style="sup" data-after="+" data-after-style="sub"
-                                                        class="numinate">50 +
-                                                    </span>
-                                                    <span>+</span>
-                                                </h4>
-                                            </div>
-                                            <h3 class="ttm-fid-title">Employees</h3>
-                                        </div><!-- ttm-fid end -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <!-- ttm-fid -->
-                                        <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style3"
-                                            style="padding-left: 5rem;">
-                                            <div class="ttm-fid-icon-wrapper">
-                                                <i class="ti ti-crown"></i>
-                                            </div>
-                                            <div class="ttm-fid-contents">
-                                                <h4 class="ttm-fid-inner">
-                                                    <span data-appear-animation="animateDigits" data-from="0"
-                                                        data-to="70" data-interval="5" data-before=""
-                                                        data-before-style="sup" data-after="+" data-after-style="sub"
-                                                        class="numinate">70
-                                                    </span>
-                                                    <span>%</span>
-                                                </h4>
-                                            </div>
-                                            <h3 class="ttm-fid-title">Women Workers</h3>
-                                        </div><!-- ttm-fid end -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <!-- ttm-fid -->
-                                        <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style3"
-                                            style="padding-left: 5rem;">
-                                            <div class="ttm-fid-icon-wrapper">
-                                                <i class="ti ti-star"></i>
-                                            </div>
-                                            <div class="ttm-fid-contents">
-                                                <h4 class="ttm-fid-inner">
-                                                    <span data-appear-animation="animateDigits" data-from="0"
-                                                        data-to="15" data-interval="1" data-before=""
-                                                        data-before-style="sup" data-after="+" data-after-style="sub"
-                                                        class="numinate">15
-                                                    </span>
-                                                    <span>+</span>
-                                                </h4>
-                                            </div>
-                                            <h3 class="ttm-fid-title">High Fashion Brands</h3>
-                                        </div><!-- ttm-fid end -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="ttm-row about-gallery-section clearfix">
-                <div class="container">
-                    <div class="section-title title-style-center_text">
-                        <div class="title-header">
-                            <h2 class="title">Visual Showcase</h2>
-                        </div>
-                        <div class="title-desc">
-                            <p>A quick gallery of the fabrics, production details, and workspace atmosphere behind our
-                                brand.</p>
-                        </div>
-                    </div>
-                    <div class="row slick_slider about-gallery-slider slick-arrows-style1 slick-dots-style1"
-                        data-slick='{"slidesToShow":3,"slidesToScroll":1,"arrows":true,"dots":true,"autoplay":true,"autoplaySpeed":2400,"infinite":true,"responsive":[{"breakpoint":1100,"settings":{"slidesToShow":2}},{"breakpoint":575,"settings":{"slidesToShow":1}}]}'>
-                        <div class="col-lg-4">
-                            <div class="about-gallery-card">
-                                <div class="about-gallery-media">
-                                    <a class="about-gallery-preview" href="images/about_01.png" data-index="0"
-                                        aria-label="Preview image 1">
-                                        <img src="images/about_01.png" alt="About gallery image 1">
-                                    </a>
-                                </div>
-                                <div class="about-gallery-caption">01</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="about-gallery-card">
-                                <div class="about-gallery-media">
-                                    <a class="about-gallery-preview" href="images/about_02.png" data-index="1"
-                                        aria-label="Preview image 2">
-                                        <img src="images/about_02.png" alt="About gallery image 2">
-                                    </a>
-                                </div>
-                                <div class="about-gallery-caption">02</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="about-gallery-card">
-                                <div class="about-gallery-media">
-                                    <a class="about-gallery-preview" href="images/about_03.png" data-index="2"
-                                        aria-label="Preview image 3">
-                                        <img src="images/about_03.png" alt="About gallery image 3">
-                                    </a>
-                                </div>
-                                <div class="about-gallery-caption">03</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="about-gallery-card">
-                                <div class="about-gallery-media">
-                                    <a class="about-gallery-preview" href="images/about_04.png" data-index="3"
-                                        aria-label="Preview image 4">
-                                        <img src="images/about_04.png" alt="About gallery image 4">
-                                    </a>
-                                </div>
-                                <div class="about-gallery-caption">04</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="about-gallery-card">
-                                <div class="about-gallery-media">
-                                    <a class="about-gallery-preview" href="images/about_05.png" data-index="4"
-                                        aria-label="Preview image 5">
-                                        <img src="images/about_05.png" alt="About gallery image 5">
-                                    </a>
-                                </div>
-                                <div class="about-gallery-caption">05</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="about-gallery-card">
-                                <div class="about-gallery-media">
-                                    <a class="about-gallery-preview" href="images/about_06.png" data-index="5"
-                                        aria-label="Preview image 6">
-                                        <img src="images/about_06.png" alt="About gallery image 6">
-                                    </a>
-                                </div>
-                                <div class="about-gallery-caption">06</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="about-gallery-card">
-                                <div class="about-gallery-media">
-                                    <a class="about-gallery-preview" href="images/about_07.png" data-index="6"
-                                        aria-label="Preview image 7">
-                                        <img src="images/about_07.png" alt="About gallery image 7">
-                                    </a>
-                                </div>
-                                <div class="about-gallery-caption">07</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--padding_top_zero-section end-->
-            <!--team-section-->
-
-            <!--team-section end-->
-
-            <!-- New Client Section -->
-            <section class="ttm-row client-section ttm-bgcolor-grey clearfix" style="display: none;">
-                <div class="container" style="margin-bottom:2rem; margin-top: 1rem;">
-
-                    <div class="mb_15 row slick_slider"
-                        data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows":false, "dots":false, "autoplay":true, "autoplaySpeed": 300, "infinite":true, "responsive": [{"breakpoint":1100,"settings":{"slidesToShow": 3}} , {"breakpoint":777,"settings":{"slidesToShow": 2}}, {"breakpoint":575,"settings":{"slidesToShow": 1}}]}'>
-                        <div class="col-lg-4">
-                            <!-- featured-imagebox-team -->
-                            <div class="featured-imagebox featured-imagebox-team style1">
-                                <div class="ttm-team-box-view-overlay">
-                                    <div class="featured-iconbox ttm-media-link">
-
-                                    </div>
-                                    <div class="featured-thumbnail">
-                                        <img class="img-fluid" src="images/IsabelMarant_car.png" style="width:320px;"
-                                            alt="image">
-                                    </div>
-                                </div>
-
-                            </div><!-- featured-imagebox-team end-->
-                        </div>
-                        <div class="col-lg-4">
-                            <!-- featured-imagebox-team -->
-                            <div class="featured-imagebox featured-imagebox-team style1">
-                                <div class="ttm-team-box-view-overlay">
-                                    <div class="featured-iconbox ttm-media-link">
-
-                                    </div>
-                                    <div class="featured-thumbnail">
-                                        <img class="img-fluid" src="images/Bonpoint_car.png" style="width:320px;"
-                                            alt="image">
-                                    </div>
-                                </div>
-
-                            </div><!-- featured-imagebox-team end-->
-                        </div>
-                        <div class="col-lg-4">
-                            <!-- featured-imagebox-team -->
-                            <div class="featured-imagebox featured-imagebox-team style1">
-                                <div class="ttm-team-box-view-overlay">
-                                    <div class="featured-iconbox ttm-media-link">
-
-                                    </div>
-                                    <div class="featured-thumbnail">
-                                        <img class="img-fluid" src="images/rhode_car.png" style="width:320px;"
-                                            alt="image">
-                                    </div>
-                                </div>
-
-                            </div><!-- featured-imagebox-team end-->
-                        </div>
-                        <div class="col-lg-4">
-                            <!-- featured-imagebox-team -->
-                            <div class="featured-imagebox featured-imagebox-team style1">
-                                <div class="ttm-team-box-view-overlay">
-                                    <div class="featured-iconbox ttm-media-link">
-
-                                    </div>
-                                    <div class="featured-thumbnail">
-                                        <img class="img-fluid" src="images/spell_car.png" style="width:320px;"
-                                            alt="image">
-                                    </div>
-                                </div>
-
-                            </div><!-- featured-imagebox-team end-->
-                        </div>
-                        <div class="col-lg-4">
-                            <!-- featured-imagebox-team -->
-                            <div class="featured-imagebox featured-imagebox-team style1">
-                                <div class="ttm-team-box-view-overlay">
-                                    <div class="featured-iconbox ttm-media-link">
-
-                                    </div>
-                                    <div class="featured-thumbnail">
-                                        <img class="img-fluid" src="images/ToryBurch_car.png" style="width:320px;"
-                                            alt="image">
-                                    </div>
-                                </div>
-
-                            </div><!-- featured-imagebox-team end-->
-                        </div>
-                        <div class="col-lg-4">
-                            <!-- featured-imagebox-team -->
-                            <div class="featured-imagebox featured-imagebox-team style1">
-                                <div class="ttm-team-box-view-overlay">
-                                    <div class="featured-iconbox ttm-media-link">
-
-                                    </div>
-                                    <div class="featured-thumbnail">
-                                        <img class="img-fluid" src="images/Loveshank_car.png" style="width:320px;"
-                                            alt="image">
-                                    </div>
-                                </div>
-
-                            </div><!-- featured-imagebox-team end-->
-                        </div>
-                        <div class="col-lg-4">
-                            <!-- featured-imagebox-team -->
-                            <div class="featured-imagebox featured-imagebox-team style1">
-                                <div class="ttm-team-box-view-overlay">
-                                    <div class="featured-iconbox ttm-media-link">
-
-                                    </div>
-                                    <div class="featured-thumbnail">
-                                        <img class="img-fluid" src="images/Doen_car.png" style="width:320px;"
-                                            alt="image">
-                                    </div>
-                                </div>
-
-                            </div><!-- featured-imagebox-team end-->
-                        </div>
-                        <div class="col-lg-4">
-                            <!-- featured-imagebox-team -->
-                            <div class="featured-imagebox featured-imagebox-team style1">
-                                <div class="ttm-team-box-view-overlay">
-                                    <div class="featured-iconbox ttm-media-link">
-
-                                    </div>
-                                    <div class="featured-thumbnail">
-                                        <img class="img-fluid" src="images/Sezane_car.png" style="width:320px;"
-                                            alt="image">
-                                    </div>
-                                </div>
-
-                            </div><!-- featured-imagebox-team end-->
-                        </div>
-
-                        <div class="col-lg-4">
-                            <!-- featured-imagebox-team -->
-                            <div class="featured-imagebox featured-imagebox-team style1">
-                                <div class="ttm-team-box-view-overlay">
-                                    <div class="featured-iconbox ttm-media-link">
-
-                                    </div>
-                                    <div class="featured-thumbnail">
-                                        <img class="img-fluid" src="images/UllaJohnson_car.png" style="width:320px;"
-                                            alt="image">
-                                    </div>
-                                </div>
-
-                            </div><!-- featured-imagebox-team end-->
-                        </div>
-
-                        <div class="col-lg-4">
-                            <!-- featured-imagebox-team -->
-                            <div class="featured-imagebox featured-imagebox-team style1">
-                                <div class="ttm-team-box-view-overlay">
-                                    <div class="featured-iconbox ttm-media-link">
-
-                                    </div>
-                                    <div class="featured-thumbnail">
-                                        <img class="img-fluid" src="images/iro_car.png" style="width:320px;"
-                                            alt="image">
-                                    </div>
-                                </div>
-
-                            </div><!-- featured-imagebox-team end-->
-                        </div>
-
-
-                    </div>
-                </div>
-        </div>
-
-
-
-
-        <!--client-section end-->
-
-
-    </div><!--site-main end-->
-
-
-    <!--footer start-->
-    <footer class="footer widget-footer ttm-bgcolor-darkgrey ttm-textcolor-white clearfix">
-        <div class="first-footer" style="margin-top: -2rem;padding: 0">
-            <div class="container" style="margin-bottom: -1rem;">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 widget-area">
-                        <div class="widget widget_text clearfix">
-                            <div class="d-sm-flex align-items-center">
-                                <div class="footer-logo">
-                                    <!-- <img id="footer-logo-img" class="img-fluid auto_size" height="46" width="170" src="images/logo.png" alt="image"> -->
-                                </div>
-                                <div class="textwidget widget-text">
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 widget-area">
-                        <div class="widget widget_social clearfix">
-                            <div class="top_bar_contact_item top_bar_social ml-auto p-0">
-                                <ul class="social-icons list-inline">
-                                    <!-- <li><a class="tooltip-top" href="#" rel="noopener" aria-label="facebook" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a class="tooltip-top" href="#" rel="noopener" aria-label="twitter" data-tooltip="Twitter"><i class="fa fa-twitter"></i></a></li> -->
-
-                                    <li><a class="tooltip-top" href="https://www.instagram.com/cyncho__/" rel="noopener"
-                                            aria-label="instagram" data-tooltip="instagram"><i
-                                                class="fa fa-instagram"></i></a></li>
-                                    <li><a class="tooltip-top"
-                                            href="https://www.linkedin.com/company/95056818/admin/page-posts/published/"
-                                            rel="noopener" aria-label="linkedin" data-tooltip="Linkedin"><i
-                                                class="fa fa-linkedin"></i></a></li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="second-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 widget-area">
-                        <div class="widget widget_text margin_right10 clearfix">
-                            <h3 class="widget-title">About Us</h3>
-                            <div class="textwidget widget-text">
-                                <div class="call_detail">
-                                    <div class="padding_top10 padding_bottom10">
-                                        <p>Dongguan CYNCHO Garment Factory was established in 2010, is a small sewing
-                                            machine workshop slowly evolved, now the factory is equipped with the number
-                                            of people 30-50
-                                            people, 40 parking spaces, the annual output of more than 300,000 pieces, At
-                                            present, the company has a wholly-owned woven factory, specializing in the
-                                            production of all kinds of woven women's and men's apparel, like top, shirt,
-                                            pant,dress, jacket,coat, There is also an invested woolen factory that
-                                            produces all kinds of knitted and sweater clothes.
-                                            Our factory has a complete set of complete production system, through the
-                                            SEDEX and GOTS GRS RWS certification, hope to be able to a new look of
-                                            quality service and high-end quality to
-                                            better serve our customers.</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
-                        <div class="widget widget_nav_menu clearfix">
-                            <h3 class="widget-title">Our Services</h3>
-                            <ul id="menu-footer-quick-links" class="menu">
-                                <li><a href="garment-manufacturing.html">Garment Manufacturing</a></li>
-                                <li><a href="garment-designing.html">Garment Designing</a></li>
-                                <li><a href="fabric-trim-sourcing.html">Fabric & Trim Sourcing</a></li>
-                                <!-- <li><a href="embroidery-designing.html">Embroidery Designing</a></li> -->
-                                <li><a href="product-development.html">Product Development</a></li>
-                                <!-- <li><a href="privacy-policy.pdf" target="_blank">Privacy Policy</a></li> -->
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 widget-area">
-                        <div class="widget widget-latest-tweets clearfix">
-                            <h3 class="widget-title">Contact Us</h3>
-                            <ul class="widget_contact_wrapper">
-                                <li><i class="ttm-textcolor-skincolor fa fa-map-marker"></i>No.1, Lane 1, Youwu, Subian
-                                    Village, Chashan Town, Dongguan, China </li>
-                                <li><i class="ttm-textcolor-skincolor fa fa-phone"></i>
-                                    <a href="tel:86-15876452036"
-                                        onclick="return confirm('Do you want to call 86-15876452036?');">86-15876452036</a>
-                                </li>
-                                <li style="white-space:nowrap ;"><i
-                                        class="ttm-textcolor-skincolor fa fa-envelope-o"></i><a
-                                        href="mailto:Adafeng@Cyncho.com">Adafeng@Cyncho.com</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 widget-area">
-                    </div>
-                </div>
-            </div>
-            <div class="bottom-footer-text copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="text-left">
-                                <span class="cpy-text">© 2026 <a href="#"
-                                        class="ttm-textcolor-skincolor font-weight-500">Cyncho Garments Co.,ltd </a> All
-                                    rights reserved.</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-    </footer>
-    <!--footer end-->
-
-    <!--back-to-top start-->
-    <a id="totop" href="#top">
-        <i class="fa fa-angle-up"></i>
-    </a>
-    <!--back-to-top end-->
-
-    </div><!-- page end -->
-
-    <div class="about-gallery-lightbox" id="aboutGalleryLightbox" aria-hidden="true">
-        <div class="about-gallery-lightbox-backdrop" id="aboutGalleryBackdrop"></div>
-        <div class="about-gallery-lightbox-panel" role="dialog" aria-modal="true" aria-label="About gallery preview">
-            <div class="about-gallery-lightbox-toolbar">
-                <div class="about-gallery-lightbox-counter" id="aboutGalleryCounter">1 / 7</div>
-                <button type="button" class="about-gallery-lightbox-close" id="aboutGalleryClose"
-                    aria-label="Close preview">&times;</button>
-            </div>
-            <div class="about-gallery-lightbox-content">
-                <button type="button" class="about-gallery-lightbox-nav about-gallery-lightbox-prev"
-                    id="aboutGalleryPrev" aria-label="Previous image">&#10094;</button>
-                <img id="aboutGalleryPreviewImage" src="" alt="Gallery preview">
-                <button type="button" class="about-gallery-lightbox-nav about-gallery-lightbox-next"
-                    id="aboutGalleryNext" aria-label="Next image">&#10095;</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Javascript -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery-migrate-3.3.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.js"></script>
-    <script src="js/jquery-waypoints.js"></script>
-    <script src="js/jquery-validate.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/numinate.min.js"></script>
-    <script src="js/imagesloaded.min.js"></script>
-    <script src="js/jquery-isotope.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var galleryImages = [
-                'images/about_01.png',
-                'images/about_02.png',
-                'images/about_03.png',
-                'images/about_04.png',
-                'images/about_05.png',
-                'images/about_06.png',
-                'images/about_07.png'
-            ];
-
-            var lightbox = document.getElementById('aboutGalleryLightbox');
-            var backdrop = document.getElementById('aboutGalleryBackdrop');
-            var closeButton = document.getElementById('aboutGalleryClose');
-            var prevButton = document.getElementById('aboutGalleryPrev');
-            var nextButton = document.getElementById('aboutGalleryNext');
-            var previewImage = document.getElementById('aboutGalleryPreviewImage');
-            var counter = document.getElementById('aboutGalleryCounter');
-            var currentIndex = 0;
-
-            function renderPreview(index) {
-                currentIndex = (index + galleryImages.length) % galleryImages.length;
-                previewImage.src = galleryImages[currentIndex];
-                previewImage.alt = 'Gallery image ' + (currentIndex + 1);
-                counter.textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
-            }
-
-            function openPreview(index) {
-                renderPreview(index);
-                lightbox.classList.add('is-open');
-                lightbox.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closePreview() {
-                lightbox.classList.remove('is-open');
-                lightbox.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = '';
-            }
-
-            document.querySelectorAll('.about-gallery-preview').forEach(function (link) {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    openPreview(parseInt(link.getAttribute('data-index'), 10) || 0);
+            <!-- Javascript -->
+            <script src="js/jquery-3.6.0.min.js">
+            </script>
+            <script src="js/jquery-migrate-3.3.2.min.js">
+            </script>
+            <script src="js/bootstrap.min.js">
+            </script>
+            <script src="js/jquery.easing.js">
+            </script>
+            <script src="js/jquery-waypoints.js">
+            </script>
+            <script src="js/jquery-validate.js">
+            </script>
+            <script src="js/jquery.prettyPhoto.js">
+            </script>
+            <script src="js/slick.min.js">
+            </script>
+            <script src="js/numinate.min.js">
+            </script>
+            <script src="js/imagesloaded.min.js">
+            </script>
+            <script src="js/jquery-isotope.js">
+            </script>
+            <script src="js/main.js">
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var galleryImages = [
+                        'images/about_01.png',
+                        'images/about_02.png',
+                        'images/about_03.png',
+                        'images/about_04.png',
+                        'images/about_05.png',
+                        'images/about_06.png',
+                        'images/about_07.png'
+                    ];
+                    var lightbox = document.getElementById('aboutGalleryLightbox');
+                    var backdrop = document.getElementById('aboutGalleryBackdrop');
+                    var closeButton = document.getElementById('aboutGalleryClose');
+                    var prevButton = document.getElementById('aboutGalleryPrev');
+                    var nextButton = document.getElementById('aboutGalleryNext');
+                    var previewImage = document.getElementById('aboutGalleryPreviewImage');
+                    var counter = document.getElementById('aboutGalleryCounter');
+                    var currentIndex = 0;
+                    function renderPreview(index) {
+                        currentIndex = (index + galleryImages.length) % galleryImages.length;
+                        previewImage.src = galleryImages[currentIndex];
+                        previewImage.alt = 'Gallery image ' + (currentIndex + 1);
+                        counter.textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
+                    }
+                    function openPreview(index) {
+                        renderPreview(index);
+                        lightbox.classList.add('is-open');
+                        lightbox.setAttribute('aria-hidden', 'false');
+                        document.body.style.overflow = 'hidden';
+                    }
+                    function closePreview() {
+                        lightbox.classList.remove('is-open');
+                        lightbox.setAttribute('aria-hidden', 'true');
+                        document.body.style.overflow = '';
+                    }
+                    document.querySelectorAll('.about-gallery-preview').forEach(function (link) {
+                        link.addEventListener('click', function (event) {
+                            event.preventDefault();
+                            openPreview(parseInt(link.getAttribute('data-index'), 10) || 0);
+                        });
+                    });
+                    prevButton.addEventListener('click', function () {
+                        renderPreview(currentIndex - 1);
+                    });
+                    nextButton.addEventListener('click', function () {
+                        renderPreview(currentIndex + 1);
+                    });
+                    closeButton.addEventListener('click', closePreview);
+                    backdrop.addEventListener('click', closePreview);
+                    document.addEventListener('keydown', function (event) {
+                        if (!lightbox.classList.contains('is-open')) {
+                            return;
+                        }
+                        if (event.key === 'Escape') {
+                            closePreview();
+                        } else if (event.key === 'ArrowLeft') {
+                            renderPreview(currentIndex - 1);
+                        } else if (event.key === 'ArrowRight') {
+                            renderPreview(currentIndex + 1);
+                        }
+                    });
                 });
-            });
-
-            prevButton.addEventListener('click', function () {
-                renderPreview(currentIndex - 1);
-            });
-
-            nextButton.addEventListener('click', function () {
-                renderPreview(currentIndex + 1);
-            });
-
-            closeButton.addEventListener('click', closePreview);
-            backdrop.addEventListener('click', closePreview);
-
-            document.addEventListener('keydown', function (event) {
-                if (!lightbox.classList.contains('is-open')) {
-                    return;
-                }
-
-                if (event.key === 'Escape') {
-                    closePreview();
-                } else if (event.key === 'ArrowLeft') {
-                    renderPreview(currentIndex - 1);
-                } else if (event.key === 'ArrowRight') {
-                    renderPreview(currentIndex + 1);
-                }
-            });
-        });
-    </script>
-    <!-- Javascript end-->
-
-</body>
-
-<!-- Mirrored from Cynchogarments.com/about-us by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Apr 2026 04:08:59 GMT -->
-
-</html>
+            </script>
+            <!-- Javascript end-->
+        </body>
+        <!-- Mirrored from Cynchogarments.com/about-us by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Apr 2026 04:08:59 GMT -->
+    </html>
