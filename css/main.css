@@ -3176,3 +3176,21 @@ section.error-404 .page-content p { font-size: 18px; margin-bottom: 30px; }
 .mfp-iframe-holder .mfp-close{
     background: transparent;
 }
+
+.seo-pill-link {
+    display: inline-block;
+    margin: 0 10px 12px;
+    padding: 10px 16px;
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    border-radius: 999px;
+    color: #222;
+    text-decoration: none;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.seo-pill-link:hover {
+    color: #fff;
+    background: #c79a2b;
+    border-color: #c79a2b;
+}
