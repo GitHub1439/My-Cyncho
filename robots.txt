@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /submit_email.html
+
+Sitemap: https://www.cyncho.com/sitemap.xml
