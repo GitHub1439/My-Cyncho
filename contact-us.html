@@ -382,7 +382,7 @@
                                     <div id="errorDiv" style="color:#c0392b;font-size:1.1rem;text-align:center;display:none;margin-bottom:1rem;">
                                         <p>Sorry, your inquiry could not be sent right now. Please try again later.</p>
                                     </div>
-                                    <form id="request_quote_form" class="request_quote_form wrap-form clearfix" method="post" action="https://formsubmit.co/ajax/Adafeng@Cyncho.com">
+                                    <form id="request_quote_form" class="request_quote_form wrap-form clearfix" method="post" action="/api/send-inquiry">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <span class="text-input">
@@ -409,9 +409,7 @@
                                                     <textarea name="content" rows="5" placeholder="content" autocomplete="off" required="required"></textarea>
                                                 </span>
                                             </div>
-                                            <input type="hidden" name="_subject" value="New Inquiry from Cyncho Website">
-                                            <input type="hidden" name="_captcha" value="false">
-                                            <input type="hidden" name="_template" value="table">
+                                            <input type="text" name="website" value="" autocomplete="off" tabindex="-1" style="display:none;">
                                             <div class="col-lg-12">
                                                 <div class="pt-15 text-center">
                                                     <button class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" type="submit" id="submit">Send Inquiry Now</button>
@@ -693,12 +691,18 @@
             errorDiv.style.display = 'none';
             submitButton.disabled = true;
             submitButton.textContent = 'Sending...';
+            var formData = new FormData(form);
+            var payload = {};
+            formData.forEach(function (value, key) {
+                payload[key] = value;
+            });
             fetch(form.action, {
                 method: 'POST',
-                body: new FormData(form),
                 headers: {
-                    'Accept': 'application/json'
-                }
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
             }).then(function (response) {
                 if (response.ok) {
                     form.reset();
