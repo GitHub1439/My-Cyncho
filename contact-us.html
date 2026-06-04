@@ -376,9 +376,6 @@
                                         </div>
                                     </div>
                                     <!-- section title end -->
-                                    <div id="thankYouDiv" style="color:green;font-size:1.2rem;text-align:center;display:none;margin-bottom:1rem;">
-                                        <p>Inquiry sent successfully. Our team will get back to you soon.</p>
-                                    </div>
                                     <div id="errorDiv" style="color:#c0392b;font-size:1.1rem;text-align:center;display:none;margin-bottom:1rem;">
                                         <p>Sorry, your inquiry could not be sent right now. Please try again later.</p>
                                     </div>
@@ -682,12 +679,10 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var form = document.getElementById('request_quote_form');
-        var thankYouDiv = document.getElementById('thankYouDiv');
         var errorDiv = document.getElementById('errorDiv');
         var submitButton = document.getElementById('submit');
         form.addEventListener('submit', function (e) {
             e.preventDefault();
-            thankYouDiv.style.display = 'none';
             errorDiv.style.display = 'none';
             submitButton.disabled = true;
             submitButton.textContent = 'Sending...';
@@ -704,12 +699,17 @@
                 },
                 body: JSON.stringify(payload)
             }).then(function (response) {
-                if (response.ok) {
-                    form.reset();
-                    thankYouDiv.style.display = 'block';
-                } else {
-                    errorDiv.style.display = 'block';
-                }
+                return response.json().catch(function () {
+                    return {};
+                }).then(function (data) {
+                    if (!response.ok) {
+                        throw new Error(data.error || 'Request failed');
+                    }
+                    return data;
+                });
+            }).then(function (data) {
+                form.reset();
+                window.location.href = data.redirect || '/thank-you.html';
             }).catch(function () {
                 errorDiv.style.display = 'block';
             }).finally(function () {

@@ -52,7 +52,7 @@ module.exports = async function handler(req, res) {
     const website = String(body.website || '').trim();
 
     if (website) {
-        return res.status(200).json({ ok: true });
+        return res.status(200).json({ ok: true, redirect: '/thank-you.html' });
     }
 
     if (!name || !email || !phone || !companyName || !content || !isValidEmail(email)) {
@@ -117,5 +117,5 @@ module.exports = async function handler(req, res) {
         return res.status(502).json({ error: 'Email could not be sent' });
     }
 
-    return res.status(200).json({ ok: true });
+    return res.status(200).json({ ok: true, redirect: '/thank-you.html' });
 };
