@@ -165,6 +165,301 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <style>
+        .lp-btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+            margin-bottom: 42px;
+        }
+
+        .lp-btn-fill,
+        .lp-btn-outline {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 2px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .02em;
+        }
+
+        .lp-btn-fill {
+            background: #c79a2b;
+            color: #fff;
+        }
+
+        .lp-btn-outline {
+            border: 1px solid #0b3d2e;
+            color: #0b3d2e;
+            background: #fff;
+        }
+
+        .lp-btn-fill:hover,
+        .lp-btn-outline:hover {
+            color: #fff;
+            background: #0b3d2e;
+        }
+
+        .lp-section {
+            padding: 70px 0 120px;
+        }
+
+        .lp-section-alt {
+            background: #f7f8fb;
+        }
+
+        .lp-section-dark {
+            background: #0b3d2e;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lp-section-dark .lp-section-title h2,
+        .lp-section-dark .lp-section-title p {
+            color: #fff;
+        }
+
+        .lp-kicker {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: #c79a2b;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .lp-section-title {
+            text-align: center;
+            max-width: 860px;
+            margin: 0 auto 34px;
+        }
+
+        .lp-section-title h2 {
+            margin-bottom: 12px;
+        }
+
+        .lp-section-title p {
+            font-size: 17px;
+            line-height: 1.85;
+            margin-bottom: 0;
+        }
+
+        .lp-card {
+            height: 100%;
+            padding: 26px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 14px 35px rgba(15, 23, 42, .07);
+        }
+
+        .lp-specialty-card {
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, .08);
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 16px 38px rgba(15, 23, 42, .08);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .lp-specialty-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 46px rgba(15, 23, 42, .14);
+        }
+
+        .lp-card-media {
+            position: relative;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: #eef1ef;
+        }
+
+        .lp-card-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .35s ease;
+        }
+
+        .lp-specialty-card:hover .lp-card-media img {
+            transform: scale(1.04);
+        }
+
+        .lp-card-badge {
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: rgba(11, 61, 46, .92);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+        }
+
+        .lp-card-body {
+            padding: 22px;
+        }
+
+        .lp-card-body h3 {
+            font-size: 18px;
+            line-height: 1.25;
+            margin-bottom: 10px;
+            white-space: nowrap;
+        }
+
+        .lp-card-body p {
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .lp-card-link {
+            color: #c79a2b;
+            font-weight: 700;
+        }
+
+        .lp-specialty-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .lp-proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .lp-proof-item {
+            padding: 24px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .16);
+            text-align: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .lp-proof-item strong {
+            display: block;
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .lp-proof-item span {
+            color: rgba(255, 255, 255, .82);
+            line-height: 1.65;
+        }
+
+        .lp-proof-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            margin-bottom: 14px;
+            border-radius: 50%;
+            background: #c79a2b;
+            color: #fff;
+            font-size: 22px;
+        }
+
+        .lp-section-dark .lp-btn-fill {
+            background: #c79a2b;
+        }
+
+        .lp-section-dark .lp-btn-fill:hover {
+            background: #fff;
+            color: #0b3d2e;
+        }
+
+        .lp-case-card {
+            height: 100%;
+            overflow: hidden;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 18px 42px rgba(15, 23, 42, .1);
+        }
+
+        .lp-case-image {
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #eef1ef;
+        }
+
+        .lp-case-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .lp-case-content {
+            padding: 28px;
+        }
+
+        .lp-case-meta {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: #c79a2b;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: .08em;
+        }
+
+        .lp-cta-center {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            .lp-section {
+                padding: 46px 0;
+            }
+
+            .lp-btn-group {
+                display: block;
+                margin-bottom: 30px;
+            }
+
+            .lp-btn-fill,
+            .lp-btn-outline {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+
+            .lp-card {
+                margin-bottom: 18px;
+            }
+
+            .lp-specialty-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lp-card-body,
+            .lp-case-content {
+                padding: 20px;
+            }
+
+            .lp-card-body h3 {
+                white-space: normal;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .lp-specialty-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -262,10 +557,10 @@
                                                                                                                                 style="padding-right:5rem">
                                                                                                                                 <h3>Accessories</h3>
                                                                                                                                 <ul style="margin-left:-8rem;">
-                                                                                                                                    <li><a href="showcase/footwear.html">Footwear </a></li>
-                                                                                                                                    <li><a href="showcase/bags.html">Handbags</a></li>
-                                                                                                                                    <li><a href="showcase/jewellery.html">Jewellery</a></li>
-                                                                                                                                    <li><a href="showcase/belts.html">Belts</a></li>
+                                                                                                                                    <li><a href="./showcase/index.html">Footwear </a></li>
+                                                                                                                                    <li><a href="./showcase/index.html">Handbags</a></li>
+                                                                                                                                    <li><a href="./showcase/index.html">Jewellery</a></li>
+                                                                                                                                    <li><a href="./showcase/index.html">Belts</a></li>
                                                                                                                                 </ul>
                                                                                                                             </div> -->
                                                         </li>
@@ -296,10 +591,10 @@
                                                         </li>
                                                         <!-- <li><a style="font-weight:700;font-size:.9rem">Accessories</a>
                                                                                                                     </li>
-                                                                                                                    <li><a href="showcase/footwear.html">Footwear </a></li>
-                                                                                                                    <li><a href="showcase/bags.html">Handbags</a></li>
-                                                                                                                    <li><a href="showcase/jewellery.html">Jewellery</a></li>
-                                                                                                                    <li><a href="showcase/belts.html">Belts</a></li> -->
+                                                                                                                    <li><a href="./showcase/index.html">Footwear </a></li>
+                                                                                                                    <li><a href="./showcase/index.html">Handbags</a></li>
+                                                                                                                    <li><a href="./showcase/index.html">Jewellery</a></li>
+                                                                                                                    <li><a href="./showcase/index.html">Belts</a></li> -->
                                                     </ul>
                                                 </li>
                                                 <li class="mega-menu-item">
@@ -469,16 +764,20 @@
                                         <!-- section title -->
                                         <div class="section-title">
                                             <div class="title-header">
-                                                <h1 class="title">Women Clothing Manufacturer in China</h1>
+                                                <h1 class="title">Private Label Women Clothing Manufacturer</h1>
                                             </div>
                                             <div class="title-desc">
                                                 <p>
-                                                    We offer a comprehensive solution for women's woven, knitted, and
-                                                    woolen garments, from development through production.
+                                                    OEM & ODM production for dresses, tops, knitwear and sustainable
+                                                    collections. From sampling to bulk production.
                                                 </p>
                                             </div>
                                         </div>
                                         <!-- section title end -->
+                                        <div class="lp-btn-group">
+                                            <a class="lp-btn-fill" href="contact-us.html">Get Free Quote</a>
+                                            <a class="lp-btn-outline" href="contact-us.html">Request Samples</a>
+                                        </div>
                                         <div class="ttm_single_image-wrapper ttm_single_image_hover ml_70 mr_70">
                                             <!--<iframe width="560" height="315"-->
                                             <!--    src="https://www.youtube.com/embed/brbn6Ydt4W4?si=CmuuAdwANqSUbcMp?autoplay=1"-->
@@ -512,7 +811,7 @@
                                             <p>Helping independent brands go from zero to one</p>
                                         </div>
                                         <a class="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-skincolor"
-                                            href="about-us.html">Explore Our Factory</a>
+                                            href="contact-us.html">Get Free Quote</a>
                                     </div>
                                 </div>
                                 <!-- featured-icon-box end-->
@@ -536,7 +835,7 @@
                                             </p>
                                         </div>
                                         <a class="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-skincolor"
-                                            href="garment-manufacturing.html">View Manufacturing Details</a>
+                                            href="contact-us.html">Request Samples</a>
                                     </div>
                                 </div>
                                 <!-- featured-icon-box end-->
@@ -549,6 +848,143 @@
                 <!-- row end -->
             </section>
             <!--services-section end-->
+            <section class="lp-section lp-section-alt clearfix">
+                <div class="container">
+                    <div class="lp-section-title">
+                        <span class="lp-kicker">Product Direction</span>
+                        <h2>Explore Our Specialties</h2>
+                        <p>Choose the product direction closest to your next collection and send us the details for a faster production review.</p>
+                    </div>
+                    <div class="lp-specialty-grid">
+                        <div class="lp-specialty-card">
+                            <div class="lp-card-media">
+                                <img src="images/gallery/Dresses_1.jpg" alt="private label women dress manufacturing" loading="lazy" decoding="async">
+                                <span class="lp-card-badge">Dresses</span>
+                            </div>
+                            <div class="lp-card-body">
+                                <h3>Women's Dresses</h3>
+                                <p>OEM and private label dress development for minimalist dresses, silk dresses, bias cut styles and seasonal collections.</p>
+                                <a class="lp-card-link" href="women-dress-manufacturer/index.html">View Dress Manufacturing</a>
+                            </div>
+                        </div>
+                        <div class="lp-specialty-card">
+                            <div class="lp-card-media">
+                                <img src="images/gallery/Dresses_5.jpg" alt="silk clothing manufacturer collection sample" loading="lazy" decoding="async">
+                                <span class="lp-card-badge">Silk</span>
+                            </div>
+                            <div class="lp-card-body">
+                                <h3>Silk Collections</h3>
+                                <p>Support for silk dresses, silk tops, silk pants and premium drape garments that need careful fabric handling.</p>
+                                <a class="lp-card-link" href="silk-clothing-manufacturer/index.html">View Silk Production</a>
+                            </div>
+                        </div>
+                        <div class="lp-specialty-card">
+                            <div class="lp-card-media">
+                                <img src="images/gallery/Blouse_6.jpg" alt="organic cotton apparel manufacturer sample" loading="lazy" decoding="async">
+                                <span class="lp-card-badge">Organic Cotton</span>
+                            </div>
+                            <div class="lp-card-body">
+                                <h3>Organic Cotton Apparel</h3>
+                                <p>Organic cotton tops, dresses and shirts for sustainable fashion brands, boutiques and private label programs.</p>
+                                <a class="lp-card-link" href="organic-cotton-clothing-manufacturer/index.html">View Organic Cotton</a>
+                            </div>
+                        </div>
+                        <div class="lp-specialty-card">
+                            <div class="lp-card-media">
+                                <img src="images/gallery/knitwerar_4.jpg" alt="knitwear manufacturer cardigan sample" loading="lazy" decoding="async">
+                                <span class="lp-card-badge">Knitwear</span>
+                            </div>
+                            <div class="lp-card-body">
+                                <h3>Knitwear Manufacturing</h3>
+                                <p>Cardigans, women's knit tops, knitted pants, sweaters and statement knitwear with yarn and gauge review.</p>
+                                <a class="lp-card-link" href="knitwear-manufacturer/index.html">View Knitwear</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lp-cta-center">
+                        <a class="lp-btn-fill" href="contact-us.html">Request a Quote</a>
+                    </div>
+                </div>
+            </section>
+            <section class="lp-section lp-section-dark clearfix">
+                <div class="container">
+                    <div class="lp-section-title">
+                        <span class="lp-kicker">Factory Advantages</span>
+                        <h2>Why Brands Choose Cyncho</h2>
+                        <p>Clear production expectations help overseas buyers decide faster before investing time in sampling.</p>
+                    </div>
+                    <div class="lp-proof-grid">
+                        <div class="lp-proof-item">
+                            <span class="lp-proof-icon"><i class="fa fa-cubes"></i></span>
+                            <strong>100+ Pieces</strong>
+                            <span>Low MOQ starting point for selected styles</span>
+                        </div>
+                        <div class="lp-proof-item">
+                            <span class="lp-proof-icon"><i class="fa fa-clock-o"></i></span>
+                            <strong>3-Day Sampling</strong>
+                            <span>Fast sample development for clear tech packs</span>
+                        </div>
+                        <div class="lp-proof-item">
+                            <span class="lp-proof-icon"><i class="fa fa-calendar-check-o"></i></span>
+                            <strong>15-Day Bulk</strong>
+                            <span>Bulk production planning after sample approval</span>
+                        </div>
+                        <div class="lp-proof-item">
+                            <span class="lp-proof-icon"><i class="fa fa-pencil-square-o"></i></span>
+                            <strong>OEM & ODM</strong>
+                            <span>Support from product idea to production</span>
+                        </div>
+                        <div class="lp-proof-item">
+                            <span class="lp-proof-icon"><i class="fa fa-leaf"></i></span>
+                            <strong>Sustainable</strong>
+                            <span>Organic cotton, wool and responsible materials</span>
+                        </div>
+                    </div>
+                    <div class="lp-cta-center">
+                        <a class="lp-btn-fill" href="contact-us.html">Get Your Sample Today</a>
+                    </div>
+                </div>
+            </section>
+            <section class="lp-section lp-section-alt clearfix">
+                <div class="container">
+                    <div class="lp-section-title">
+                        <span class="lp-kicker">Social Proof</span>
+                        <h2>Case Studies for Growing Fashion Brands</h2>
+                        <p>Anonymous examples based on common B2B production needs, designed to show how Cyncho supports launch and repeat-order planning.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="lp-case-card">
+                                <div class="lp-case-image">
+                                    <img src="images/gallery/Dresses_14.jpg" alt="Australian womenswear brand first collection case study" loading="lazy" decoding="async">
+                                </div>
+                                <div class="lp-case-content">
+                                    <span class="lp-case-meta">First Collection</span>
+                                    <h3>Australian Brand First Collection Launch</h3>
+                                    <p>Helped a new womenswear brand organize samples, fabric direction, size range and production communication for its first private label collection.</p>
+                                    <a class="lp-card-link" href="case-study/index.html">Read More Case Studies</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="lp-case-card">
+                                <div class="lp-case-image">
+                                    <img src="images/gallery/knitwerar_12.jpg" alt="UK boutique private label knitwear case study" loading="lazy" decoding="async">
+                                </div>
+                                <div class="lp-case-content">
+                                    <span class="lp-case-meta">Knitwear Project</span>
+                                    <h3>UK Boutique Private Label Knitwear Project</h3>
+                                    <p>Supported cardigan and knit top development with yarn review, sample comments, color planning and bulk production preparation.</p>
+                                    <a class="lp-card-link" href="knitted-cardigan-manufacturer/index.html">View Knitwear Capability</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lp-cta-center">
+                        <a class="lp-btn-fill" href="contact-us.html">Request Factory Quote</a>
+                    </div>
+                </div>
+            </section>
             <!--padding_top_zero-section end-->
             <section
                 class="ttm-row padding_top_zero-section margin_top90 res-991-margin_top0 bg-layer-equal-height ttm-bgcolor-grey clearfix">
@@ -604,7 +1040,7 @@
                                 <div class="margin_top20">
                                     <div class="d-inline-block">
                                         <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-dark margin_top15"
-                                            href="contact-us.html">contact us</a>
+                                            href="contact-us.html">Request a Quote</a>
                                     </div>
                                 </div>
                             </div>
@@ -748,7 +1184,7 @@
                                 </div>
                                 <div class="d-inline-block margin_top2">
                                     <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-dark margin_top15"
-                                        href="contact-us.html">contact us</a>
+                                        href="contact-us.html">Request a Quote</a>
                                 </div>
                             </div>
                         </div>
@@ -928,6 +1364,9 @@
                                 </p>
                             </details>
                         </div>
+                        <div class="lp-cta-center">
+                            <a class="lp-btn-fill" href="contact-us.html">Request a Quote</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -956,13 +1395,13 @@
                             <a href="product-development.html"
                                 style="display:inline-block;margin:0 10px 12px;padding:10px 16px;border:1px solid rgba(34,34,34,0.15);border-radius:999px;color:#222;text-decoration:none;background:#fff;box-shadow:0 6px 18px rgba(15,23,42,0.06);">Product
                                 Development</a>
-                            <a href="women-clothing-manufacturer/"
+                            <a href="women-clothing-manufacturer/index.html"
                                 style="display:inline-block;margin:0 10px 12px;padding:10px 16px;border:1px solid rgba(34,34,34,0.15);border-radius:999px;color:#222;text-decoration:none;background:#fff;box-shadow:0 6px 18px rgba(15,23,42,0.06);">Women
                                 Clothing Manufacturer</a>
-                            <a href="private-label-clothing-manufacturer/"
+                            <a href="private-label-clothing-manufacturer/index.html"
                                 style="display:inline-block;margin:0 10px 12px;padding:10px 16px;border:1px solid rgba(34,34,34,0.15);border-radius:999px;color:#222;text-decoration:none;background:#fff;box-shadow:0 6px 18px rgba(15,23,42,0.06);">Private
                                 Label Clothing Manufacturer</a>
-                            <a href="oem-apparel-manufacturer/"
+                            <a href="oem-apparel-manufacturer/index.html"
                                 style="display:inline-block;margin:0 10px 12px;padding:10px 16px;border:1px solid rgba(34,34,34,0.15);border-radius:999px;color:#222;text-decoration:none;background:#fff;box-shadow:0 6px 18px rgba(15,23,42,0.06);">OEM
                                 Apparel Manufacturer</a>
                             <a href="contact-us.html"
@@ -971,10 +1410,10 @@
                         </div>
                         <p style="max-width:860px;margin:18px auto 0;line-height:1.9;">
                             For sourcing and collection planning, explore our latest guides on
-                            <a href="blog/minimalist-fashion-manufacturing-guide/">minimalist fashion manufacturing</a>,
-                            <a href="blog/contemporary-designer-womenswear-manufacturing/">contemporary designer womenswear production</a>,
-                            <a href="blog/modern-tailoring-womenswear-guide/">modern tailoring development</a> and
-                            <a href="blog/capsule-wardrobe-collection-development/">capsule wardrobe collection planning</a>.
+                            <a href="blog/minimalist-fashion-manufacturing-guide/index.html">minimalist fashion manufacturing</a>,
+                            <a href="blog/contemporary-designer-womenswear-manufacturing/index.html">contemporary designer womenswear production</a>,
+                            <a href="blog/modern-tailoring-womenswear-guide/index.html">modern tailoring development</a> and
+                            <a href="blog/capsule-wardrobe-collection-development/index.html">capsule wardrobe collection planning</a>.
                         </p>
                     </div>
                 </div>
@@ -1075,7 +1514,7 @@
                                     <li>
                                         <a href="product-development.html">Product Development</a>
                                     </li>
-                                    <!-- <li><a href="privacy-policy.pdf" target="_blank">Privacy Policy</a></li> -->
+                                    <!-- <li><a href="./about-us.html" target="_blank">Privacy Policy</a></li> -->
                                 </ul>
                             </div>
                         </div>

@@ -48,6 +48,10 @@ module.exports = async function handler(req, res) {
     const email = String(body.email || '').trim();
     const phone = String(body.phone || '').trim();
     const companyName = String(body.company_name || '').trim();
+    const country = String(body.country || '').trim();
+    const productCategory = String(body.product_category || '').trim();
+    const estimatedQuantity = String(body.estimated_quantity || '').trim();
+    const timeline = String(body.timeline || '').trim();
     const content = String(body.content || '').trim();
     const website = String(body.website || '').trim();
 
@@ -55,7 +59,17 @@ module.exports = async function handler(req, res) {
         return res.status(200).json({ ok: true, redirect: '/thank-you.html' });
     }
 
-    if (!name || !email || !phone || !companyName || !content || !isValidEmail(email)) {
+    if (
+        !name ||
+        !email ||
+        !phone ||
+        !companyName ||
+        !country ||
+        !productCategory ||
+        !estimatedQuantity ||
+        !content ||
+        !isValidEmail(email)
+    ) {
         return res.status(400).json({ error: 'Invalid inquiry information' });
     }
 
@@ -75,8 +89,24 @@ module.exports = async function handler(req, res) {
                 <td style="border:1px solid #ddd;padding:10px;">${escapeHtml(phone)}</td>
             </tr>
             <tr>
-                <td style="border:1px solid #ddd;padding:10px;font-weight:bold;">Company</td>
+                <td style="border:1px solid #ddd;padding:10px;font-weight:bold;">Brand / Company</td>
                 <td style="border:1px solid #ddd;padding:10px;">${escapeHtml(companyName)}</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid #ddd;padding:10px;font-weight:bold;">Country</td>
+                <td style="border:1px solid #ddd;padding:10px;">${escapeHtml(country)}</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid #ddd;padding:10px;font-weight:bold;">Product Category</td>
+                <td style="border:1px solid #ddd;padding:10px;">${escapeHtml(productCategory)}</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid #ddd;padding:10px;font-weight:bold;">Estimated Quantity</td>
+                <td style="border:1px solid #ddd;padding:10px;">${escapeHtml(estimatedQuantity)}</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid #ddd;padding:10px;font-weight:bold;">Timeline</td>
+                <td style="border:1px solid #ddd;padding:10px;">${escapeHtml(timeline || 'Not provided')}</td>
             </tr>
             <tr>
                 <td style="border:1px solid #ddd;padding:10px;font-weight:bold;">Message</td>
@@ -89,7 +119,11 @@ module.exports = async function handler(req, res) {
         `Name: ${name}`,
         `Email: ${email}`,
         `Phone / WhatsApp: ${phone}`,
-        `Company: ${companyName}`,
+        `Brand / Company: ${companyName}`,
+        `Country: ${country}`,
+        `Product Category: ${productCategory}`,
+        `Estimated Quantity: ${estimatedQuantity}`,
+        `Timeline: ${timeline || 'Not provided'}`,
         '',
         'Message:',
         content
