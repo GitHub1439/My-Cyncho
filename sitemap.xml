@@ -80,9 +80,9 @@
   </url>
   <url>
     <loc>https://www.cyncho.com/blog.html</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cyncho.com/about</loc>
@@ -104,7 +104,25 @@
   </url>
   <url>
     <loc>https://www.cyncho.com/blog</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cyncho.com/blog/why-launching-a-clothing-brand-feels-overwhelming</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cyncho.com/blog/best-fabrics-for-womenswear-production</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cyncho.com/blog/source-garments-without-middleman-fees</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

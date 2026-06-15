@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="title desc">
+  <title id="title">Fabric sourcing and private label apparel development</title>
+  <desc id="desc">A B2B fashion factory illustration showing fabric rolls, color swatches, trims and private label garment development.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8faf7"/>
+      <stop offset="1" stop-color="#f3ead3"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="640" rx="44" fill="url(#bg)"/>
+  <circle cx="798" cy="128" r="116" fill="#0b3d2e" opacity=".08"/>
+  <circle cx="156" cy="508" r="118" fill="#c79a2b" opacity=".1"/>
+  <rect x="116" y="118" width="728" height="410" rx="30" fill="#fff" stroke="#d8e2df"/>
+  <g transform="translate(170 184)">
+    <rect width="116" height="268" rx="28" fill="#0b3d2e"/>
+    <rect x="34" y="28" width="48" height="212" rx="24" fill="#fff" opacity=".18"/>
+  </g>
+  <g transform="translate(308 184)">
+    <rect width="116" height="268" rx="28" fill="#c79a2b"/>
+    <rect x="34" y="28" width="48" height="212" rx="24" fill="#fff" opacity=".22"/>
+  </g>
+  <g transform="translate(446 184)">
+    <rect width="116" height="268" rx="28" fill="#6f827b"/>
+    <rect x="34" y="28" width="48" height="212" rx="24" fill="#fff" opacity=".18"/>
+  </g>
+  <rect x="616" y="194" width="148" height="84" rx="18" fill="#f3f6f4" stroke="#d8e2df"/>
+  <rect x="616" y="306" width="148" height="84" rx="18" fill="#fbfaf5" stroke="#d8e2df"/>
+  <path d="M642 236h92M642 348h92" stroke="#0b3d2e" stroke-width="10" stroke-linecap="round"/>
+  <path d="M642 260h58M642 372h58" stroke="#c79a2b" stroke-width="8" stroke-linecap="round"/>
+  <path d="M138 560h684" stroke="#0b3d2e" stroke-width="14" stroke-linecap="round" opacity=".12"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="title desc">
+  <title id="title">Apparel sampling and quality control process</title>
+  <desc id="desc">A professional apparel sampling and quality control illustration with measurement tools, approval checklist and garment sample.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbfaf5"/>
+      <stop offset="1" stop-color="#eef4f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="640" rx="44" fill="url(#bg)"/>
+  <circle cx="164" cy="140" r="92" fill="#c79a2b" opacity=".11"/>
+  <circle cx="786" cy="480" r="150" fill="#0b3d2e" opacity=".08"/>
+  <rect x="126" y="96" width="312" height="448" rx="28" fill="#fff" stroke="#d8e2df"/>
+  <rect x="500" y="116" width="328" height="392" rx="28" fill="#fff" stroke="#d8e2df"/>
+  <path d="M208 192c28-36 62-36 90 0l58 78h-206z" fill="#f3f6f4" stroke="#0b3d2e" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M200 356h164M200 402h128" stroke="#c79a2b" stroke-width="12" stroke-linecap="round"/>
+  <path d="M556 206h206M556 272h206M556 338h206" stroke="#d8e2df" stroke-width="12" stroke-linecap="round"/>
+  <path d="M556 206l28 28 48-58M556 272l28 28 48-58M556 338l28 28 48-58" fill="none" stroke="#0b3d2e" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="548" y="420" width="228" height="34" rx="17" fill="#c79a2b"/>
+  <g fill="#0b3d2e" opacity=".9">
+    <rect x="180" y="464" width="184" height="18" rx="9"/>
+    <rect x="586" y="164" width="144" height="20" rx="10"/>
+  </g>
+  <path d="M126 572h704" stroke="#0b3d2e" stroke-width="14" stroke-linecap="round" opacity=".12"/>
+</svg>
