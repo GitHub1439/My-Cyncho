@@ -4036,8 +4036,6 @@ article.article-body .col-lg-8,
 }
 
 .cyncho-article-sidebar {
-    position: sticky;
-    top: 104px;
     padding: 24px;
     border: 1px solid rgba(11, 61, 46, .1);
     border-radius: 8px;
@@ -4079,6 +4077,61 @@ article.article-body .col-lg-8,
 
 .cyncho-article-sidebar-wrap {
     min-width: 0;
+    position: sticky;
+    top: 104px;
+}
+
+.article-sidebar-cta {
+    margin-top: 18px;
+    padding: 24px;
+    border: 1px solid rgba(199, 154, 43, .35);
+    border-radius: 8px;
+    background: #0b3d2e;
+    color: rgba(255, 255, 255, .84);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, .08);
+}
+
+.article-sidebar-cta__label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #c79a2b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.article-sidebar-cta h3 {
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.article-sidebar-cta p {
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, .78);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.article-sidebar-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    background: #c79a2b;
+    color: #fff;
+    font-weight: 800;
+    text-align: center;
+}
+
+.article-sidebar-cta__btn:hover {
+    background: #fff;
+    color: #0b3d2e;
 }
 
 /* More disciplined case-study-like layout for SEO landing pages */
@@ -4134,8 +4187,11 @@ article.article-body .col-lg-8,
         padding: 24px;
     }
 
-    .cyncho-article-sidebar {
+    .cyncho-article-sidebar-wrap {
         position: static;
+    }
+
+    .cyncho-article-sidebar {
         margin-top: 24px;
     }
 }
