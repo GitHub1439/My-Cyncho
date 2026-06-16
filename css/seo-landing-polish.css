@@ -509,6 +509,70 @@
     color: rgba(255, 255, 255, .82);
 }
 
+/* Case-study inspired SEO landing page rhythm */
+.seo-hero,
+.seo-landing-hero {
+    border-bottom: 1px solid rgba(11, 61, 46, .1);
+}
+
+.seo-hero .container,
+.seo-landing-hero .container,
+.seo-section .container {
+    max-width: 1180px;
+}
+
+.seo-hero h1,
+.seo-landing-hero h1 {
+    letter-spacing: 0;
+}
+
+.seo-section:not(.seo-visual-proof):not(.seo-cta) {
+    background: #fff;
+}
+
+.seo-section.alt {
+    border-top: 1px solid rgba(11, 61, 46, .07);
+    border-bottom: 1px solid rgba(11, 61, 46, .07);
+}
+
+.seo-section .col-lg-8 > h2,
+.seo-section .col-lg-10 > h2,
+.seo-section .col-lg-8.offset-lg-2 > h2 {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(11, 61, 46, .1);
+}
+
+.seo-section .seo-copy {
+    margin-bottom: 16px;
+}
+
+.seo-section .seo-card {
+    border-top: 4px solid #0b3d2e !important;
+}
+
+.seo-section .seo-card h2,
+.seo-section .seo-card h3 {
+    color: #0b3d2e;
+}
+
+.seo-section .seo-card p,
+.seo-section .proof {
+    color: #5d6764;
+}
+
+.seo-section .toc {
+    top: 104px;
+}
+
+.seo-section .toc strong {
+    letter-spacing: 0;
+}
+
+.seo-section .toc a:last-child {
+    border-radius: 4px;
+}
+
 @media (max-width: 991px) {
     .toc {
         position: static;
