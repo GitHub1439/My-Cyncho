@@ -11,6 +11,7 @@
 
   gtag('config', 'AW-18214911457');
 </script>
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="keywords" content="" />
@@ -474,6 +475,11 @@
                                             </div>
                                             <input type="text" name="website" value="" autocomplete="off" tabindex="-1" style="display:none;">
                                             <div class="col-lg-12">
+                                                <div class="pt-10 pb-10 text-center">
+                                                    <div class="cf-turnstile" data-sitekey="0x4AAAAAADo36U1OigBGUKBp"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
                                                 <div class="pt-15 text-center">
                                                     <button class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" type="submit" id="submit">Send Inquiry Now</button>
                                                 </div>
@@ -760,13 +766,20 @@
     document.addEventListener('DOMContentLoaded', function () {
         var form = document.getElementById('request_quote_form');
         var errorDiv = document.getElementById('errorDiv');
+        var errorMessage = errorDiv.querySelector('p');
         var submitButton = document.getElementById('submit');
         form.addEventListener('submit', function (e) {
             e.preventDefault();
             errorDiv.style.display = 'none';
+            var formData = new FormData(form);
+            if (!formData.get('cf-turnstile-response')) {
+                errorMessage.textContent = 'Please complete the security verification before sending your inquiry.';
+                errorDiv.style.display = 'block';
+                return;
+            }
+
             submitButton.disabled = true;
             submitButton.textContent = 'Sending...';
-            var formData = new FormData(form);
             var payload = {};
             formData.forEach(function (value, key) {
                 payload[key] = value;
@@ -790,8 +803,12 @@
             }).then(function (data) {
                 form.reset();
                 window.location.href = data.redirect || '/thank-you.html';
-            }).catch(function () {
+            }).catch(function (error) {
+                errorMessage.textContent = error.message || 'Sorry, your inquiry could not be sent right now. Please try again later.';
                 errorDiv.style.display = 'block';
+                if (window.turnstile) {
+                    window.turnstile.reset();
+                }
             }).finally(function () {
                 submitButton.disabled = false;
                 submitButton.textContent = 'Send Inquiry Now';

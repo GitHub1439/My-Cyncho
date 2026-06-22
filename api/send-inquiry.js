@@ -1,4 +1,7 @@
+const { ratelimit } = require('../lib/ratelimit');
+
 const RESEND_API_URL = 'https://api.resend.com/emails';
+const TURNSTILE_VERIFY_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 const TO_EMAIL = 'Adafeng@Cyncho.com';
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'Cyncho Website <noreply@cyncho.com>';
 const SUBJECT = 'New Inquiry from Cyncho Website';
@@ -27,6 +30,80 @@ function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+function getClientIp(req) {
+    const forwardedFor = req.headers['x-forwarded-for'];
+    if (typeof forwardedFor === 'string' && forwardedFor.trim()) {
+        return forwardedFor.split(',')[0].trim();
+    }
+
+    const cfConnectingIp = req.headers['cf-connecting-ip'];
+    if (typeof cfConnectingIp === 'string' && cfConnectingIp.trim()) {
+        return cfConnectingIp.trim();
+    }
+
+    const socketIp = req.socket && req.socket.remoteAddress;
+    if (typeof socketIp === 'string' && socketIp.trim()) {
+        return socketIp.trim();
+    }
+
+    return '';
+}
+
+function getTurnstileToken(body) {
+    return String(
+        body.turnstileToken ||
+        body.cfTurnstileToken ||
+        body['cf-turnstile-response'] ||
+        ''
+    ).trim();
+}
+
+async function verifyTurnstileToken(token, req) {
+    const secretKey = process.env.TURNSTILE_SECRET_KEY;
+
+    if (!secretKey) {
+        return { ok: false, status: 500, error: 'Verification service is not configured' };
+    }
+
+    if (!token) {
+        return { ok: false, status: 400, error: 'Please complete the security verification' };
+    }
+
+    const params = new URLSearchParams();
+    params.append('secret', secretKey);
+    params.append('response', token);
+
+    const clientIp = getClientIp(req);
+    if (clientIp) {
+        params.append('remoteip', clientIp);
+    }
+
+    try {
+        const response = await fetch(TURNSTILE_VERIFY_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: params.toString()
+        });
+
+        if (!response.ok) {
+            return { ok: false, status: 403, error: 'Security verification failed' };
+        }
+
+        const result = await response.json();
+        if (!result.success) {
+            console.warn('Turnstile verification failed:', result['error-codes'] || []);
+            return { ok: false, status: 403, error: 'Security verification failed' };
+        }
+
+        return { ok: true };
+    } catch (error) {
+        console.error('Turnstile verification error:', error);
+        return { ok: false, status: 403, error: 'Security verification failed' };
+    }
+}
+
 module.exports = async function handler(req, res) {
     if (req.method === 'OPTIONS') {
         res.setHeader('Allow', 'POST, OPTIONS');
@@ -36,6 +113,25 @@ module.exports = async function handler(req, res) {
     if (req.method !== 'POST') {
         res.setHeader('Allow', 'POST');
         return res.status(405).json({ error: 'Method not allowed' });
+    }
+
+    const ip = getClientIp(req) || 'unknown';
+    if (!ratelimit) {
+        return res.status(500).json({ error: 'Rate limit service is not configured' });
+    }
+
+    try {
+        const { success } = await ratelimit.limit(ip);
+        if (!success) {
+            return res.status(429).json({
+                error: 'Too many requests. Please try again later.'
+            });
+        }
+    } catch (error) {
+        console.error('Rate limit check failed:', error);
+        return res.status(429).json({
+            error: 'Too many requests. Please try again later.'
+        });
     }
 
     const apiKey = process.env.RESEND_API_KEY;
@@ -57,6 +153,11 @@ module.exports = async function handler(req, res) {
 
     if (website) {
         return res.status(200).json({ ok: true, redirect: '/thank-you.html' });
+    }
+
+    const turnstileResult = await verifyTurnstileToken(getTurnstileToken(body), req);
+    if (!turnstileResult.ok) {
+        return res.status(turnstileResult.status).json({ error: turnstileResult.error });
     }
 
     if (
