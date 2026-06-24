@@ -3731,6 +3731,25 @@ body {
     line-height: 1.65 !important;
 }
 
+.article-body a:not(.article-btn):not(.article-sidebar-cta__btn):not(.seo-pill-link),
+.cyncho-article-main a:not(.article-btn):not(.article-sidebar-cta__btn):not(.seo-pill-link),
+.article-wrap + section:not(.seo-links-section) a:not(.article-btn):not(.article-sidebar-cta__btn):not(.seo-pill-link),
+.article-wrap ~ section:not(.seo-links-section) a:not(.article-btn):not(.article-sidebar-cta__btn):not(.seo-pill-link) {
+    color: #1a5fb4 !important;
+    font-weight: inherit;
+    text-decoration: underline !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 3px;
+    transition: color .18s ease;
+}
+
+.article-body a:not(.article-btn):not(.article-sidebar-cta__btn):not(.seo-pill-link):hover,
+.cyncho-article-main a:not(.article-btn):not(.article-sidebar-cta__btn):not(.seo-pill-link):hover,
+.article-wrap + section:not(.seo-links-section) a:not(.article-btn):not(.article-sidebar-cta__btn):not(.seo-pill-link):hover,
+.article-wrap ~ section:not(.seo-links-section) a:not(.article-btn):not(.article-sidebar-cta__btn):not(.seo-pill-link):hover {
+    color: #0645ad !important;
+}
+
 .article-body ul,
 .article-body ol {
     margin-bottom: 16px !important;
