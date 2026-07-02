@@ -343,6 +343,71 @@
               margin-right: 3.5rem;
           }
         }
+
+        /* Showcase product gallery responsive overrides */
+        .image-container {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        .image-container .row {
+            row-gap: 24px;
+        }
+        .image-container .ttm-box-col-wrapper {
+            display: block;
+        }
+        .image-container .slider {
+            width: 100%;
+            height: 100%;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 10px 28px rgba(15, 23, 42, .08);
+        }
+        .image-container .slides {
+            display: block;
+            overflow: hidden;
+        }
+        .image-container .img-slide {
+            display: block;
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border: 1px solid rgba(60, 102, 172, .18);
+            border-radius: 14px;
+            background: #f7f8fb;
+        }
+        .image-container .img-slide:hover {
+            box-shadow: 0 16px 34px rgba(15, 23, 42, .14);
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 28px auto 0 !important;
+            padding: 0 15px;
+        }
+        .pagination button {
+            min-width: 42px;
+            border-radius: 999px;
+            font-weight: 700;
+        }
+        .title {
+            margin: 0 0 28px !important;
+            text-align: center;
+        }
+        @media (max-width: 991px) {
+            .image-container .img-slide {
+                height: 360px;
+            }
+        }
+        @media (max-width: 575px) {
+            .image-container .img-slide {
+                height: 330px;
+            }
+            .parent-button {
+                margin-left: 0 !important;
+            }
+        }
     </style>
     <body>
         <!--page start-->
@@ -574,284 +639,69 @@
                             <div class="image-container">
                                 <h1 class="title">Bottoms</h1>
                                 <div class="row ttm-boxes-spacing-5px">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper" id="dresses">
+                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
                                         <div class="slider">
-                                            <a href="#">
-                                            </a>
                                             <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_1.jpg" alt="women bottoms and jumpsuits manufacturing sample 1" decoding="async">
+                                                <img class="img-slide" src="../images/showcase/bottoms/bottoms-01.webp" alt="women bottoms and pants manufacturing sample 1" decoding="async">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
                                         <div class="slider">
-                                            <a href="#">
-                                            </a>
                                             <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_2.jpg" alt="women bottoms and jumpsuits manufacturing sample 2" loading="lazy" decoding="async">
+                                                <img class="img-slide" src="../images/showcase/bottoms/bottoms-02.webp" alt="women bottoms and pants manufacturing sample 2" loading="lazy" decoding="async">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
                                         <div class="slider">
-                                            <a href="#">
-                                            </a>
                                             <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_3.jpg" alt="women bottoms and jumpsuits manufacturing sample 3" loading="lazy" decoding="async">
+                                                <img class="img-slide" src="../images/showcase/bottoms/bottoms-03.webp" alt="women bottoms and pants manufacturing sample 3" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
+                                        <div class="slider">
+                                            <div class="slides">
+                                                <img class="img-slide" src="../images/showcase/bottoms/bottoms-04.webp" alt="women bottoms and pants manufacturing sample 4" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
+                                        <div class="slider">
+                                            <div class="slides">
+                                                <img class="img-slide" src="../images/showcase/bottoms/bottoms-05.webp" alt="women bottoms and pants manufacturing sample 5" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
+                                        <div class="slider">
+                                            <div class="slides">
+                                                <img class="img-slide" src="../images/showcase/bottoms/bottoms-06.webp" alt="women bottoms and pants manufacturing sample 6" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
+                                        <div class="slider">
+                                            <div class="slides">
+                                                <img class="img-slide" src="../images/showcase/bottoms/bottoms-07.webp" alt="women bottoms and pants manufacturing sample 7" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
+                                        <div class="slider">
+                                            <div class="slides">
+                                                <img class="img-slide" src="../images/showcase/bottoms/bottoms-08.webp" alt="women bottoms and pants manufacturing sample 8" loading="lazy" decoding="async">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- row end -->
-                                <div class="row ttm-boxes-spacing-10px">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#">
-                                            </a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_4.jpg" alt="women bottoms and jumpsuits manufacturing sample 4" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#">
-                                            </a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_5.jpg" alt="women bottoms and jumpsuits manufacturing sample 5" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#">
-                                            </a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_6.jpg" alt="women bottoms and jumpsuits manufacturing sample 6" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- row end -->
-                                <div class="row ttm-boxes-spacing-10px">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#">
-                                            </a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_7.jpg" alt="women bottoms and jumpsuits manufacturing sample 7" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                            <div class="slider">
-                                                <a href="#"></a>
-                                                <div class="slides">
-                                                    <img class="img-slide" src="../images/gallery/Bottom_8.jpg" alt="women bottoms and jumpsuits manufacturing sample 8" loading="lazy" decoding="async">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                            <div class="slider">
-                                                <a href="#"></a>
-                                                <div class="slides">
-                                                    <img class="img-slide" src="../images/gallery/Bottom_9.jpg" alt="women bottoms and jumpsuits manufacturing sample 9" loading="lazy" decoding="async">
-                                                </div>
-                                            </div>
-                                        </div> -->
-                                </div>
-                                <!-- row end -->
-                                <!-- <div class="row ttm-boxes-spacing-10px">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_10.jpg" alt="women bottoms and jumpsuits manufacturing sample 10" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_11.jpg" alt="women bottoms and jumpsuits manufacturing sample 11" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_12.jpg" alt="women bottoms and jumpsuits manufacturing sample 12" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>row end -->
-                                <!-- <div class="row ttm-boxes-spacing-10px">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_13.jpg" alt="women bottoms and jumpsuits manufacturing sample 13" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_14.jpg" alt="women bottoms and jumpsuits manufacturing sample 14" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_15.jpg" alt="women bottoms and jumpsuits manufacturing sample 15" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>row end -->
-                                <!-- <div class="row ttm-boxes-spacing-10px">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_16.jpg" alt="women bottoms and jumpsuits manufacturing sample 16" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_17.jpg" alt="women bottoms and jumpsuits manufacturing sample 17" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_18.jpg" alt="women bottoms and jumpsuits manufacturing sample 18" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>row end -->
-                                <!-- <div class="row ttm-boxes-spacing-10px">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_1.jpg" alt="women bottoms and jumpsuits manufacturing sample 19" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_2.jpg" alt="women bottoms and jumpsuits manufacturing sample 20" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_3.jpg" alt="women bottoms and jumpsuits manufacturing sample 21" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>row end -->
-                                <!-- <div class="row ttm-boxes-spacing-10px">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_4.jpg" alt="women bottoms and jumpsuits manufacturing sample 22" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_5.jpg" alt="women bottoms and jumpsuits manufacturing sample 23" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_6.jpg" alt="women bottoms and jumpsuits manufacturing sample 24" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>row end -->
-                                <!-- <div class="row ttm-boxes-spacing-10px">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_7.jpg" alt="women bottoms and jumpsuits manufacturing sample 25" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_8.jpg" alt="women bottoms and jumpsuits manufacturing sample 26" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_9.jpg" alt="women bottoms and jumpsuits manufacturing sample 27" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>row end -->
-                                <!-- <div class="row ttm-boxes-spacing-10px">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_10.jpg" alt="women bottoms and jumpsuits manufacturing sample 28" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_11.jpg" alt="women bottoms and jumpsuits manufacturing sample 29" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 ttm-box-col-wrapper">
-                                        <div class="slider">
-                                            <a href="#"></a>
-                                            <div class="slides">
-                                                <img class="img-slide" src="../images/gallery/Bottom_12.jpg" alt="women bottoms and jumpsuits manufacturing sample 30" loading="lazy" decoding="async">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>row end -->
                             </div>
                         </div>
                         <!-- Category End -->
                     </div>
-                </div>
-                <div class="pagination">
-                    <button onclick="showPage(1)">1</button>
-                    <!-- <button onclick="showPage(2)">2</button> -->
-                    <!-- Add more buttons for additional pages as needed -->
+                </div>                <div class="pagination" aria-label="Product gallery pages">
+                    <button type="button" onclick="showPage(1)">1</button>
                 </div>
                 <div class='parent-button' style='text-align:center;margin-left:3rem'>
                     <div class="d-inline-block" style="margin-bottom: 2rem;">
@@ -996,7 +846,7 @@
                             <div class="col-lg-12">
                                 <div class="text-center">
                                     <span class="cpy-text">
-                                        © 2026
+                                        漏 2026
                                         <a href="#" class="ttm-textcolor-skincolor font-weight-500">Cyncho Garments Co.,ltd</a>
                                         All rights reserved.
                                     </span>
@@ -1017,31 +867,27 @@
         <!-- page end -->
         <script>
               // JavaScript function to show images for a specific page
-            function showPage(pageNumber) {
-                const imagesPerPage = 9;
-                const imageContainer = document.querySelector('.image-container');
-                const allImages = imageContainer.querySelectorAll('.ttm-box-col-wrapper');
-                const start = (pageNumber - 1) * imagesPerPage;
-                const end = pageNumber * imagesPerPage;
-                allImages.forEach((image, index) => {
-                    if (index >= start && index < end) {
-                        image.style.display = 'block';
-                    } else {
-                        image.style.display = 'none';
-                    }
-                });
+            window.showPage = function showPage(pageNumber) {
+                            const imagesPerPage = 9;
+                            const imageContainer = document.querySelector('.image-container');
+                            if (!imageContainer) return;
+                            const allImages = imageContainer.querySelectorAll('.ttm-box-col-wrapper');
+                            const start = (pageNumber - 1) * imagesPerPage;
+                            const end = pageNumber * imagesPerPage;
+                            allImages.forEach((image, index) => {
+                                image.style.display = index >= start && index < end ? 'block' : 'none';
+                            });
 
-                // Remove the 'active' class from all buttons
-                const buttons = document.querySelectorAll('.pagination button');
-                buttons.forEach((button) => {
-                    button.classList.remove('button-active');
-                });
-                // Add the 'active' class to the clicked button
-                const clickedButton = document.querySelector('.pagination button:nth-child(' + pageNumber + ')');
-                clickedButton.classList.add('button-active');
-            }
-            // Show the first page by default
-            showPage(1);
+                            const buttons = document.querySelectorAll('.pagination button');
+                            buttons.forEach((button) => {
+                                button.classList.remove('button-active');
+                            });
+                            const clickedButton = buttons[pageNumber - 1];
+                            if (clickedButton) {
+                                clickedButton.classList.add('button-active');
+                            }
+                        }
+                        window.showPage(1);
         </script>
         <!-- Javascript -->
         <script src="../js/jquery-3.6.0.min.js">
